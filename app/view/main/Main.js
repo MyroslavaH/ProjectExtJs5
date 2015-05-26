@@ -10,7 +10,7 @@ Ext.define('ProjectExtJs5.view.main.Main', {
     requires: [
         'ProjectExtJs5.view.main.MainController',
         'ProjectExtJs5.view.main.MainModel',
-        'ProjectExtJs5.view.main.Menu'
+        'ProjectExtJs5.view.menu.Menu'
     ],
 
     xtype: 'app-main',

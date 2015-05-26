@@ -1,4 +1,4 @@
-$image-search-path: 'D:/ProjectExtJs5/build/development/ProjectExtJs5/resources';
+$image-search-path: 'G:/ProjectExtJs5/build/development/ProjectExtJs5/resources';
 $theme-name:  'ext-theme-aria' !default;
 $include-ext-abstractcomponent: true;
 $include-ext-abstractcontainer: true;
@@ -955,6 +955,7 @@ $include-projectextjs5-application: true;
 $include-projectextjs5-view-main-main: true;
 $include-projectextjs5-view-main-maincontroller: true;
 $include-projectextjs5-view-main-mainmodel: true;
+$include-projectextjs5-view-main-menu: true;
 /* including package ext-theme-base */
 @import '../../../../../ext/packages/ext-theme-base/sass/etc/all';
 /* including package ext-theme-neutral */
