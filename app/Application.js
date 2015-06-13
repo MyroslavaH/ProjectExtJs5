@@ -8,11 +8,30 @@ Ext.define('ProjectExtJs5.Application', {
     
     name: 'ProjectExtJs5',
 
+    models:[
+//        'InvoiceGridModel'
+    ],
+
     stores: [
-        // TODO: add global / shared stores here
+//        'InvoiceGridPanel'
+        ],
+    views:[
+//        'AllCustomers'
+//        'InvoiceGrid',
+//        'Main',
+//        'MainContainer',
+//        'MainModel',
+//        'NewCustomer'
     ],
     
     launch: function () {
         // TODO - Launch the application
+//        Ext.create('Ext.container.Viewport', {
+//            layout: 'fit',
+//            items: {
+//                xtype: 'allcustomers'
+//            }
+//
+//        });
     }
 });

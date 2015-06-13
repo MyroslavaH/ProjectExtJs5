@@ -8,13 +8,32 @@
 Ext.define('ProjectExtJs5.view.main.MainController', {
     extend: 'Ext.app.ViewController',
 
+
     requires: [
         'Ext.window.MessageBox'
     ],
 
     alias: 'controller.main',
 
-    onClickButton: function () {
+    refs:[
+        {
+            ref: 'tapPanel',
+            selector: 'app-main tabpanel'
+        },
+        {
+            ref: 'invoiceBtn',
+            selector: '#invoice-btn'
+        }
+    ],
+    init: function(){
+        this.control({
+            '#invoice-btn':{
+                click: this.onInvoiceBtnClick
+            }
+        })
+    },
+
+    onInvoiceBtnClick: function () {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },
 
