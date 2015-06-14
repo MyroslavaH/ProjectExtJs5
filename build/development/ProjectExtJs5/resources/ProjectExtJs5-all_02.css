@@ -3273,3 +3273,7 @@ tr.x-grid-subtable-row {
   background-color: #ed9200; }
 
 /* including package ext-theme-aria */
+/* including package ProjectExtJs5 */
+/* line 2, ../../../../sass/src/view/menu/Menu.scss */
+.app-menu .menu-panel {
+  border-bottom: 1px solid #8e8e8e; }

@@ -50,7 +50,7 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
                     text: 'Invoice',
                     width: 200,
                     itemId: 'invoice-btn',
-                    cls: 'button-style open'
+                    cls: 'button-style open',
 //                    handler: 'onInvoiceBtnClick'
 //                    handler : function(){
 //                        var invoiceContainer = new Ext.Window({
