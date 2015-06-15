@@ -7,7 +7,7 @@ Ext.define('ProjectExtJs5.view.main.NewReturn', {
 
         xtype: 'new-return',
         renderTo: Ext.getBody(),
-        itemid: 'new-return',
+        itemId: 'new-return',
 //        layout: 'anchor',
         defaults: {
             anchor: '100%'
@@ -21,77 +21,151 @@ Ext.define('ProjectExtJs5.view.main.NewReturn', {
 //            labelAlign: 'top',
 //            msgTarget: 'side'
 //        },
+        layout: "vbox",
 
-        items: [{
-            xtype: 'container',
-            anchor: '100%',
-            layout: 'hbox',
-            items:[{
+        items: [
+            {
                 xtype: 'container',
-                flex: 1,
-                layout: 'anchor',
-                items: [{
-                    xtype:'textfield',
-                    fieldLabel: 'Name',
+                layout: 'hbox',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        fieldLabel: 'Name',
 //                afterLabelTextTpl: 'required',
-                    allowBlank: false,
-                    name: 'name',
-                    anchor:'95%'
-                }, {
-                    xtype: 'datefield',
-                    fieldLabel: 'Choose date',
-                    maxValue: new Date(),// limited to the current date or prior
-                    format: 'd / m / Y',
-                    name: 'date',
-                    anchor:'95%'
-                }]
-            },{
+                        allowBlank: false,
+                        name: 'name',
+                        anchor: '98% 10%'
+                    },
+                    {
+                        xtype: 'component',
+                        width: 60
+                    },
+
+                    {
+                        xtype: 'datefield',
+                        fieldLabel: 'Choose date',
+                        maxValue: new Date(),// limited to the current date or prior
+                        format: 'd / m / Y',
+                        name: 'date',
+                        anchor: '98% 10%'
+                    }
+                ]
+            },
+            {
+                xtype: 'component',
+                height: 20
+            },
+            {
+                xtype: "container",
+//                flex: 1,
+                layout: 'hbox',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        fieldLabel: 'Phone',
+//                      afterLabelTextTpl: 'required',
+                        allowBlank: false,
+                        name: 'phone',
+                        anchor: '100%'
+                    },
+                    {
+                        xtype: 'component',
+                        width: 60
+                    },
+                    {
+                        xtype: 'textfield',
+                        fieldLabel: 'Description',
+//                      afterLabelTextTpl: 'required',
+                        allowBlank: false,
+                        name: 'description',
+                        anchor: '100%'
+                    }
+                ]
+            },
+            {
+                xtype: 'component',
+                height: 20
+            },
+            {
                 xtype: 'container',
-                flex: 1,
-                layout: 'anchor',
-                items: [{
-                    xtype:'textfield',
-                    fieldLabel: 'Phone',
-//                afterLabelTextTpl: 'required',
-                    allowBlank: false,
-                    name: 'phone',
-                    anchor:'100%'
-                },{
-                    xtype:'textfield',
-                    fieldLabel: 'Description',
-//                afterLabelTextTpl: 'required',
-                    allowBlank: false,
-                    name: 'description',
-                    anchor:'100%'
-                }]
-            }]
-//           items: [{
-//               region: 'south',
-//
-//
-//            extend: 'Ext.grid.panel',
-//            layout: 'hbox',
-//            title: 'All Invoices',
-//            xtype: 'invoice-grid',
-//            itemid: 'invoice-grid',
-//            store: Ext.data.StoreManager.lookup('invoiceStore'),
-//            columns: [
-//                { text: 'Number',  dataIndex: 'number', width: 100},
-//                { text: 'Name',  dataIndex: 'name', flex: 1 },
-//                { text: 'Sum', dataIndex: 'sum',flex: 1 },
-//                { text: 'Currency', dataIndex: 'currency',width: 100 },
-//                { text: 'Date', dataIndex: 'date',width: 100 },
-//                { text: 'About', dataIndex: 'about',flex: 1}
-//            ],
-//            height: 450,
-//            width: 800,
-//            renderTo: Ext.getBody()
-//           }
-//]
+                height: 40,
+//                region: 'north',
+                items: [
+                    {
+                        xtype: 'button',
+                        width: 100,
+                        itemId: 'create',
+                        text: 'Add'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                layout:  'column',
+                width: 350,
+                height: 100,
+
+                items: [
+                    {
+                        title: '№',
+                        columnWidth: '0.2',
+                        layout: 'hbox'
+
+                    },
+                    {
+                        title: 'Goods',
+                        columnWidth: '0.5',
+                        layout: 'hbox'
+                    },
+                    {
+                        title: 'Value',
+                        columnWidth: '0.3',
+                        layout: 'hbox'
+                    }
+
+                ]
+            },
+            {
+                xtype: 'container',
+                height: 50,
+                width: 300,
+//                anchor: '95% 10%',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        width: 30,
+                        layout: 'hbox'
+
+                    },
+                    {
+                        xtype: 'combo',
+                        width: 100,
+                        layout: 'hbox'
+                    },
+                    {
+                        xtype: 'numberfield',
+                        layout: 'hbox',
+                        width: 40
+                    }
+                ]
+
+            }
 
 
-        }],
 
+
+
+
+
+
+
+
+
+
+
+
+        ],
 
 
         buttons: [{

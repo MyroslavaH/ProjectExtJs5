@@ -22,7 +22,6 @@ Ext.define('ProjectExtJs5.view.main.NewInvoice', {
 //            msgTarget: 'side'
 //        },
         layout: 'vbox',
-
         items: [
             {
                 xtype: 'container',
@@ -78,40 +77,8 @@ Ext.define('ProjectExtJs5.view.main.NewInvoice', {
             {
                 xtype: 'component',
                 height: 20
-            },
-//            {
-////            extend: 'Ext.grid.panel',
-//                layout: 'hbox',
-//                dockedItems: [{
-//                    xtype: 'toolbar',
-//                    dock: 'top',
-//                    items: [{
-//                        xtype: 'button',
-//                        width: 200,
-//                        height: 40,
-//                        itemId:'add-new-grid',
-//                        text: 'Add  element'
-////                        fieldLabel: 'Add  element',
-////                        editable:false
-//                    }]
-//                }],
-////                title: 'All Invoices',
-//                xtype: 'grid',
-////                itemid: 'invoice-grid',
-////                store: 'invoiceStore',
-//                store: Ext.create('Ext.data.Store'),
-//                columns: [
-//                    { text: 'Number',  dataIndex: 'number', width: 100, editor: 'textfield'},
-//                    { text: 'Name',  dataIndex: 'name', flex: 1, editor: 'textfield'},
-//                    { text: 'Sum', dataIndex: 'sum',flex: 1, editor: 'textfield' },
-//                    { text: 'Currency', dataIndex: 'currency',width: 100 , editor: 'textfield'},
-//                    { text: 'Date', dataIndex: 'date',width: 100, editor: 'textfield' },
-//                    { text: 'About', dataIndex: 'about',flex: 1, editor: 'textfield'}
-//                ],
-//                height: 450,
-//                width: 800,
-//                renderTo: Ext.getBody()
-//            }
+            }
+//
         ],
 
 
