@@ -76,7 +76,7 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
                     cls: 'button-style open',
                     handler : function(){
                         var returnContainer = new Ext.Window({
-                            itemid: 'return-container',
+                            itemId: 'return-container',
                             title: 'Return Invoices',
                             closable: true,
                             plain: true,
@@ -96,7 +96,7 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
                     cls: 'button-style open',
                     handler : function(){
                         var reserveContainer = new Ext.Window({
-                            itemid: 'reserve-container',
+                            itemId: 'reserve-container',
                             title: 'Reserves',
                             closable: true,
                             plain: true,
