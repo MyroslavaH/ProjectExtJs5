@@ -47,7 +47,7 @@ Ext.define('ProjectExtJs5.view.main.NewReturn', {
                         maxValue: new Date(),// limited to the current date or prior
                         format: 'd / m / Y',
                         name: 'date',
-                        anchor: '98% 10%'
+                        anchor: '100% 10%'
                     }
                 ]
             },
@@ -101,9 +101,9 @@ Ext.define('ProjectExtJs5.view.main.NewReturn', {
             },
             {
                 xtype: 'container',
-                layout:  'column',
-                width: 350,
-                height: 100,
+                layout: 'column',
+                width: 500,
+                height: 40,
 
                 items: [
                     {
@@ -114,43 +114,65 @@ Ext.define('ProjectExtJs5.view.main.NewReturn', {
                     },
                     {
                         title: 'Goods',
-                        columnWidth: '0.5',
+                        columnWidth: '0.4',
                         layout: 'hbox'
                     },
                     {
                         title: 'Value',
-                        columnWidth: '0.3',
+                        columnWidth: '0.2',
+                        layout: 'hbox'
+                    },
+
+                    {
+                        title: 'Value',
+                        columnWidth: '0.2',
                         layout: 'hbox'
                     }
 
+
                 ]
             },
+
+
             {
                 xtype: 'container',
                 height: 50,
-                width: 300,
-//                anchor: '95% 10%',
-                layout: 'vbox',
+                width: 500,
+                itemId: 'new-line',
+                layout: 'hbox',
                 items: [
                     {
                         xtype: 'textfield',
-                        width: 30,
+                        width: 50,
                         layout: 'hbox'
 
                     },
                     {
                         xtype: 'combo',
-                        width: 100,
+                        width: 250,
                         layout: 'hbox'
                     },
                     {
                         xtype: 'numberfield',
                         layout: 'hbox',
-                        width: 40
+                        width: 100
+                    },
+                    {
+                        xtype: 'textfield',
+                        width: 100,
+                        layout: 'hbox'
                     }
+
+
                 ]
 
+            },
+            {
+                xtype: 'container',
+                itemId: 'excellent-place'
             }
+
+
 
 
 
