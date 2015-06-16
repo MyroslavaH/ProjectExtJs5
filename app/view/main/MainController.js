@@ -18,7 +18,11 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     refs:[
         {
             ref: 'tapPanel',
-            selector: 'app-main tabpanel'
+            selector: '#tapPanelLink'
+        },
+        {
+            ref: 'main',
+            selector: 'app-main'
         },
         {
             ref: 'invoiceBtn',
@@ -28,14 +32,28 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     init: function(){
         this.control({
             '#invoice-btn':{
-                click: this.onInvoiceBtnClick
+//                click: this.onInvoiceBtnClick
+            },
+            '#tapPanelLink':{
+                'invoice': this.openNewTap
             }
         })
     },
 
-    onInvoiceBtnClick: function () {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+    openNewTap: function(tabPanel){
+        var container = Ext.create('ProjectExtJs5.view.main.InvoiceContainer', {
+
+        });
+        tabPanel.add({
+                title: 'Invoice',
+                closable: true,
+                items: container
+                
+            }
+        )
     },
+
+
 
     onConfirm: function (choice) {
         if (choice === 'yes') {

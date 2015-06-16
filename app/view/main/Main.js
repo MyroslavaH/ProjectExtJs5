@@ -3,7 +3,7 @@
  * "autoCreateViewport" property. That setting automatically applies the "viewport"
  * plugin to promote that instance of this class to the body element.
  *
-// * TODO - Replace this content of this view to suite the needs of your application.
+ // * TODO - Replace this content of this view to suite the needs of your application.
  */
 Ext.define('ProjectExtJs5.view.main.Main', {
     extend: 'Ext.container.Container',
@@ -65,12 +65,13 @@ Ext.define('ProjectExtJs5.view.main.Main', {
                 region: 'center',
                 itemId: 'tapPanelLink',
                 xtype: 'tabpanel',
+                reference: 'tapPanelLink',
                 items: [
-                    {
-                    title: 'Tab 1',
-                    bodyPadding: 20,
-                    html: '<h2>Content...</h2>'
-                    },
+//                    {
+//                    title: 'Tab 1',
+//                    bodyPadding: 20,
+//                    html: '<h2>Content...</h2>'
+//                    },
 //                    {
 //                    title: 'The Data',
 //                    layout: 'fit',
@@ -102,29 +103,17 @@ Ext.define('ProjectExtJs5.view.main.Main', {
 //                    }
 //        ]
 //                    }
-//                    {
-//                        xtype: 'all-customers',
-//                        layout: 'fit',
-//                        closable: true
-////                        itemId: 'all-sellers'
-//
-//                    }
-//                    {
-//                        title: 'all',
-//                        xtype: 'all-customers'
-//                    }
-//                    {
-//                        flex: 1,
-//                        xtype: 'invoice-grid'
-//                    }
-
-
                 ]
-//            {
-//                xtype: 'new-customer'
-//            }
+            }
+        ],
+    initComponent: function () {
+        var me = this;
+        me.callParent(arguments);
+        me.down('#invoice-btn').on('click', me.setFireEvent, me)
+    },
 
-
-
-}]
+    setFireEvent: function(){
+        var tapPanel = this.down('#tapPanelLink');
+        this.down('#tapPanelLink').fireEvent('invoice', tapPanel)
+    }
 });
