@@ -11,30 +11,32 @@ Ext.define('ProjectExtJs5.view.main.Main', {
         'ProjectExtJs5.view.main.MainController',
         'ProjectExtJs5.view.main.MainModel',
         'ProjectExtJs5.view.menu.Menu',
-        'ProjectExtJs5.view.main.NewCustomer',
-        'ProjectExtJs5.view.main.AllCustomers',
-        'ProjectExtJs5.view.main.InvoiceGrid',
-        'ProjectExtJs5.view.main.InvoiceContainer',
-        'ProjectExtJs5.view.main.NewInvoice',
-        'ProjectExtJs5.view.main.ReturnContainer',
-        'ProjectExtJs5.view.main.ReturnGrid',
-        'ProjectExtJs5.view.main.NewReturn',
-        'ProjectExtJs5.view.main.ReserveContainer',
-        'ProjectExtJs5.view.main.ReserveGrid',
-        'ProjectExtJs5.view.main.NewReserve',
-        'ProjectExtJs5.view.main.PurchaseContainer',
-        'ProjectExtJs5.view.main.PurchaseGrid',
-        'ProjectExtJs5.view.main.NewPurchase',
-        'ProjectExtJs5.view.main.PurchaseReturnContainer',
-        'ProjectExtJs5.view.main.PurchaseReturnGrid',
-        'ProjectExtJs5.view.main.NewPurchaseReturn',
-        'ProjectExtJs5.view.main.GoodsContainer',
-        'ProjectExtJs5.view.main.GoodsGrid',
-        'ProjectExtJs5.view.main.NewGoods',
-        'ProjectExtJs5.view.main.CashContainer',
-        'ProjectExtJs5.view.main.CashGrid',
-        'ProjectExtJs5.view.main.BankContainer',
-        'ProjectExtJs5.view.main.BankGrid'
+        'ProjectExtJs5.view.clients.NewCustomer',
+        'ProjectExtJs5.view.clients.AllCustomers',
+        'ProjectExtJs5.view.sale.InvoiceGrid',
+        'ProjectExtJs5.view.sale.InvoiceContainer',
+        'ProjectExtJs5.view.sale.NewInvoice',
+        'ProjectExtJs5.view.sale.ReturnContainer',
+        'ProjectExtJs5.view.sale.ReturnGrid',
+        'ProjectExtJs5.view.sale.NewReturn',
+        'ProjectExtJs5.view.sale.ReserveContainer',
+        'ProjectExtJs5.view.sale.ReserveGrid',
+        'ProjectExtJs5.view.sale.NewReserve',
+        'ProjectExtJs5.view.buying.PurchaseContainer',
+        'ProjectExtJs5.view.buying.PurchaseGrid',
+        'ProjectExtJs5.view.buying.NewPurchase',
+        'ProjectExtJs5.view.buying.PurchaseReturnContainer',
+        'ProjectExtJs5.view.buying.PurchaseReturnGrid',
+        'ProjectExtJs5.view.buying.NewPurchaseReturn',
+        'ProjectExtJs5.view.warehouse.GoodsContainer',
+        'ProjectExtJs5.view.warehouse.GoodsGrid',
+        'ProjectExtJs5.view.warehouse.NewGoods',
+        'ProjectExtJs5.view.warehouse.ChangeAvailabilityContainer',
+        'ProjectExtJs5.view.payment.CashContainer',
+        'ProjectExtJs5.view.payment.CashGrid',
+        'ProjectExtJs5.view.payment.BankContainer',
+        'ProjectExtJs5.view.payment.BankGrid'
+     //  'ProjectExtJs5.view.sale.Grid'
 
     ],
 
@@ -48,7 +50,6 @@ Ext.define('ProjectExtJs5.view.main.Main', {
     layout: {
         type: 'border'
     },
-
     items:
         [{
             region: 'north',
@@ -65,55 +66,33 @@ Ext.define('ProjectExtJs5.view.main.Main', {
                 region: 'center',
                 itemId: 'tapPanelLink',
                 xtype: 'tabpanel',
-                reference: 'tapPanelLink',
-                items: [
-//                    {
-//                    title: 'Tab 1',
-//                    bodyPadding: 20,
-//                    html: '<h2>Content...</h2>'
-//                    },
-//                    {
-//                    title: 'The Data',
-//                    layout: 'fit',
-//                    closable: true,
-//                    items: [{
-//                        xtype: 'grid',
-//                        title: 'Simpsons',
-//                        store: {
-//                            fields:['name', 'email', 'phone'],
-//                            data:[
-//                                { name: 'Lisa',  email: "lisa@simpsons.com",
-//                                    phone: "555-111-1224"  },
-//                                { name: 'Bart',  email: "bart@simpsons.com",
-//                                    phone: "555-222-1234" },
-//                                { name: 'Homer', email: "home@simpsons.com",
-//                                    phone: "555-222-1244"  },
-//                                { name: 'Marge', email: "marge@simpsons.com",
-//                                    phone: "555-222-1254"  }
-//                            ],
-//                            proxy: {
-//                                type: 'memory'
-//                            }
-//                        },
-//                        columns: [
-//                            { text: 'Name',  dataIndex: 'name' },
-//                            { text: 'Email', dataIndex: 'email', flex: 1},
-//                            { text: 'Phone', dataIndex: 'phone' }
-//                        ]
-//                    }
-//        ]
-//                    }
-                ]
+                reference: 'tapPanelLink'
+
             }
         ],
     initComponent: function () {
         var me = this;
         me.callParent(arguments);
-        me.down('#invoice-btn').on('click', me.setFireEvent, me)
+            me.down('#invoice-btn').on('click', me.setFireEvent, me, 'invoice'),
+            me.down('#return-btn').on('click', me.setFireEvent, me, 'return'),
+            me.down('#reserve-btn').on('click', me.setFireEvent, me, 'reserve'),
+            me.down('#purchase-btn').on('click', me.setFireEvent, me, 'purchase'),
+            me.down('#buy-return-btn').on('click', me.setFireEvent, me, 'buy return'),
+            me.down('#goods-btn').on('click', me.setFireEvent, me, 'goods'),
+            me.down('#change-btn').on('click', me.setFireEvent, me, 'change availability'),
+            me.down('#cash-btn').on('click', me.setFireEvent, me, 'cash'),
+            me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
+            me.down('#new-customer-btn').on('click', me.setFireEvent, me, 'new customer'),
+            me.down('#all-customers').on('click', me.setFireEvent, me, 'all customers')
+//        me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
+//        me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
+//        me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank')
+
+
     },
 
-    setFireEvent: function(){
+    setFireEvent: function(scope, el, title){
         var tapPanel = this.down('#tapPanelLink');
-        this.down('#tapPanelLink').fireEvent('invoice', tapPanel)
+        this.down('#tapPanelLink').fireEvent('openContainer', tapPanel, title)
     }
 });

@@ -35,23 +35,61 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
 //                click: this.onInvoiceBtnClick
             },
             '#tapPanelLink':{
-                'invoice': this.openNewTap
+                'openContainer': this.openNewTap
             }
         })
     },
 
-    openNewTap: function(tabPanel){
-        var container = Ext.create('ProjectExtJs5.view.main.InvoiceContainer', {
+    openNewTap: function(tabPanel, name){
+        var container;
 
-        });
+        if (name === 'invoice') {
+            container = Ext.create('ProjectExtJs5.view.sale.InvoiceContainer', {
+            });
+        } else if (name === 'return') {
+            container = Ext.create('ProjectExtJs5.view.sale.ReturnContainer', {
+            });
+        } else if (name === 'reserve') {
+            container = Ext.create('ProjectExtJs5.view.sale.ReserveContainer', {
+            });
+        } else if (name === 'purchase') {
+            container = Ext.create('ProjectExtJs5.view.buying.PurchaseContainer', {
+            });
+        } else if (name === 'buy return') {
+            container = Ext.create('ProjectExtJs5.view.buying.PurchaseReturnContainer', {
+            });
+        } else if (name === 'goods') {
+            container = Ext.create('ProjectExtJs5.view.warehouse.GoodsContainer', {
+            });
+        } else if (name === 'cash') {
+            container = Ext.create('ProjectExtJs5.view.payment.CashContainer', {
+            });
+        } else {
+            container = Ext.create('ProjectExtJs5.view.payment.BankContainer', {
+            });
+        }
+//        if(name == 'invoice' ){
+//                container = Ext.create('ProjectExtJs5.view.sale.InvoiceContainer', {
+//
+//                });
+//            }
+//            else if(name == 'return'){
+//                container = Ext.create('ProjectExtJs5.view.sale.ReturnContainer',{
+//
+//                });
+//        }
+        name = this.toUpperFirsLetter(name);
         tabPanel.add({
-                title: 'Invoice',
+                title: name,
                 closable: true,
                 items: container
-                
             }
         )
     },
+    toUpperFirsLetter: function(str){
+        return str.substr(0,1).toUpperCase()+ str.substr(1);
+    },
+
 
 
 
@@ -60,4 +98,11 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
             //
         }
     }
+//    onRowEditorEdit: function (editor, ctx, eOpts) {
+//        var vendorColIdx = 2;
+//        var combo = ctx.Grid.columns[vendorColIdx].getEditor(ctx.record);
+//        var vendorRecord = combo.findRecord('name', combo.getValue());
+//        ctx.record.set('vendorId', vendorRecord.get('id'));
+//        ctx.Grid.getStore().sync();  // Force a post with the updated data.
+//    }
 });

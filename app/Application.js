@@ -9,10 +9,12 @@ Ext.define('ProjectExtJs5.Application', {
     name: 'ProjectExtJs5',
 
     models:[
+//        'NewInvoiceModel'
 //        'InvoiceGridModel'
     ],
 
     stores: [
+//        'NewInvoiceStore'
 //        'InvoiceGridPanel'
         ],
     views:[

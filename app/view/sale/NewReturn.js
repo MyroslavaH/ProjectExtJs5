@@ -1,0 +1,272 @@
+/**
+ * Created by Myroslava on 13.06.2015.
+ */
+
+Ext.define('ProjectExtJs5.view.sale.NewReturn', {
+        extend: 'Ext.form.Panel',
+
+        xtype: 'new-return',
+        renderTo: Ext.getBody(),
+        itemId: 'new-return',
+//        layout: 'anchor',
+        defaults: {
+            anchor: '100%'
+        },
+        height: 500,
+        width: 700,
+        bodyPadding: 10,
+//        collapsible: true,
+//        frame: true,
+//        fieldDefaults: {
+//            labelAlign: 'top',
+//            msgTarget: 'side'
+//        },
+        layout: "vbox",
+
+        items: [
+            {
+                xtype: 'container',
+                layout: 'hbox',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        fieldLabel: 'Name',
+                        allowBlank: false,
+                        name: 'name',
+                        anchor: '98% 10%'
+                    },
+                    {
+                        xtype: 'component',
+                        width: 60
+                    },
+
+                    {
+                        xtype: 'datefield',
+                        fieldLabel: 'Choose date',
+                        maxValue: new Date(),// limited to the current date or prior
+                        format: 'd / m / Y',
+                        name: 'date',
+                        anchor: '100% 10%'
+                    }
+                ]
+            },
+            {
+                xtype: 'component',
+                height: 20
+            },
+            {
+                xtype: "container",
+                layout: 'hbox',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        fieldLabel: 'Phone',
+//                      afterLabelTextTpl: 'required',
+                        allowBlank: false,
+                        name: 'phone',
+                        anchor: '100%'
+                    },
+                    {
+                        xtype: 'component',
+                        width: 60
+                    },
+                    {
+                        xtype: 'textfield',
+                        fieldLabel: 'Description',
+                        allowBlank: false,
+                        name: 'description',
+                        anchor: '100%'
+                    }
+                ]
+            },
+            {
+                xtype: 'component',
+                height: 20
+            },
+            {
+                xtype: 'container',
+                height: 40,
+                items: [
+                    {
+                        xtype: 'button',
+                        width: 100,
+                        itemId: 'create',
+                        text: 'Add'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                layout: 'column',
+                width: 500,
+                height: 40,
+                items: [
+                    {
+                        title: '№',
+                        columnWidth: '0.2',
+                        layout: 'hbox'
+
+                    },
+                    {
+                        title: 'Goods',
+                        columnWidth: '0.4',
+                        layout: 'hbox'
+                    },
+                    {
+                        title: 'Value',
+                        columnWidth: '0.2',
+                        layout: 'hbox'
+                    },
+                    {
+                        title: 'Value',
+                        columnWidth: '0.2',
+                        layout: 'hbox'
+                    }
+
+
+                ]
+            },
+            {
+                xtype: 'container',
+                height: 50,
+                width: 500,
+                itemId: 'new-line',
+                layout: 'hbox',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        width: 50,
+                        layout: 'hbox'
+
+                    },
+                    {
+                        xtype: 'combo',
+                        width: 250,
+                        layout: 'hbox'
+                    },
+                    {
+                        xtype: 'numberfield',
+                        layout: 'hbox',
+                        width: 100
+                    },
+                    {
+                        xtype: 'textfield',
+                        width: 100,
+                        layout: 'hbox'
+                    }
+
+
+                ]
+
+            },
+            {
+                xtype: 'gridpanel',
+                width: 650,
+                height: 300,
+//                title: 'New',
+//                store: 'ModelCars',
+                columns: [
+                    {
+                        text: 'Id',
+                        hidden: true,
+                        dataIndex: 'id'
+                    },
+                    {
+                        text: 'Name',
+                        sortable: true,
+                        dataIndex: 'name',
+                        flex: 3,
+                        editor: {
+                            xtype: 'textfield',
+                            allowBlank: false
+                        }
+                    },
+                    {
+                        text: 'Amount',
+                        sortable: true,
+                        dataIndex: 'vendorName',
+                        flex: 2,
+                        editor: {
+                            xtype: 'combobox',
+//                            store: 'Vendors',
+                            displayField: 'name',
+                            valueField: 'name',
+                            editable: false,
+                            queryMode: 'local',
+                            forceSelection: true,
+                            triggerAction: 'all',
+                            allowBlank: false
+                        }
+                    },
+                    {
+                        text: 'Quantity',
+                        sortable: true,
+                        dataIndex: 'category',
+                        flex: 2,
+                        editor: {
+                            xtype: 'textfield',
+                            allowBlank: false
+                        }
+                    },
+                    {
+                        text: 'Price',
+                        sortable: true,
+                        dataIndex: 'category',
+                        flex: 2,
+                        editor: {
+                            xtype: 'textfield',
+                            allowBlank: false
+                        }
+                    },
+                    {
+                        text: 'Sum',
+                        sortable: true,
+                        dataIndex: 'category',
+                        flex: 2,
+                        editor: {
+                            xtype: 'textfield',
+                            allowBlank: false
+                        }
+
+                    }
+
+
+                ]
+
+            }
+
+
+//            {
+//                xtype: 'container',
+//                itemId: 'excellent-place'
+//            }
+        ],
+
+
+        buttons: [{
+            text: 'Reset',
+            handler: function() {
+                this.up('form').getForm().reset();
+            }
+        },
+            {
+                text: 'Submit',
+                formBind: true, //only enabled once the form is valid
+                disabled: true,
+                handler: function() {
+                    var form = this.up('form').getForm();
+                    if (form.isValid()) {
+                        form.submit({
+                            success: function(form, action) {
+                                Ext.Msg.alert('Success', action.result.msg);
+                            },
+                            failure: function(form, action) {
+                                Ext.Msg.alert('Failed', action.result.msg);
+                            }
+                        });
+                    }
+                }
+            }]
+
+    }
+);
