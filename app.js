@@ -12,7 +12,7 @@ Ext.application({
     name: 'ProjectExtJs5',
 
     extend: 'ProjectExtJs5.Application',
-    
+
     autoCreateViewport: 'ProjectExtJs5.view.main.Main'
 	
     //-------------------------------------------------------------------------

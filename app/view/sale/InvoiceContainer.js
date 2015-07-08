@@ -20,21 +20,21 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceContainer', {
                     text: 'New Invoice',
                     height: 40,
                     width: 100,
-                    itemId: 'new-invoice'
-//                    handler : function(){
-//                        var newInvoice = new Ext.Window({
-//                            itemId: 'new-invoice',
-//                            title: 'New Invoice',
-//                            closable: true,
-//                            plain: true,
-//                            layout: 'fit',
-//                            closeAction: 'hide',
-//                            items: [
-//                                {xtype: 'new-invoice'}
-//                            ]
-//                        });
-//                        newInvoice.show();
-//                    }
+                    itemId: 'new-invoice',
+                    handler : function(){
+                        var newInvoice = new Ext.window.Window({
+                            itemId: 'new-invoice',
+                            title: 'New Invoice',
+                            closable: true,
+                            plain: true,
+                            layout: 'fit',
+                            closeAction: 'hide',
+                            items: [
+                                {xtype: 'new-invoice'}
+                            ]
+                        });
+                        newInvoice.show();
+                    }
 
 
                 },
@@ -57,14 +57,18 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceContainer', {
 
             ]
         },
-
         {
             xtype: 'invoice-grid',
             region: 'north'
         }
 
 
-    ]
+    ],
+
+    initComponent: function () {
+        var me = this;
+        me.callParent(arguments);
+    }
 
 
 

@@ -8,24 +8,28 @@ Ext.define('ProjectExtJs5.Application', {
     
     name: 'ProjectExtJs5',
 
+
     models:[
-//        'NewInvoiceModel'
+//        'ProjectExtJs5.model.InvoiceGridModel'
 //        'InvoiceGridModel'
     ],
 
     stores: [
-//        'NewInvoiceStore'
+        'ProjectExtJs5.store.InvoiceGrid'
 //        'InvoiceGridPanel'
         ],
     views:[
 //        'AllCustomers'
 //        'InvoiceGrid',
-//        'Main',
+//        'main.Main',
 //        'MainContainer',
 //        'MainModel',
 //        'NewCustomer'
     ],
-    
+//    controllers:[
+//        'MainController'
+//],
+//
     launch: function () {
         // TODO - Launch the application
 //        Ext.create('Ext.container.Viewport', {

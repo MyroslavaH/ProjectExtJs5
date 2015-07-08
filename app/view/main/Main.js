@@ -36,7 +36,7 @@ Ext.define('ProjectExtJs5.view.main.Main', {
         'ProjectExtJs5.view.payment.CashGrid',
         'ProjectExtJs5.view.payment.BankContainer',
         'ProjectExtJs5.view.payment.BankGrid'
-     //  'ProjectExtJs5.view.sale.Grid'
+//        'ProjectExtJs5.view.sale.Grid'
 
     ],
 
@@ -71,8 +71,8 @@ Ext.define('ProjectExtJs5.view.main.Main', {
             }
         ],
     initComponent: function () {
-        var me = this;
-        me.callParent(arguments);
+            var me = this;
+            me.callParent(arguments);
             me.down('#invoice-btn').on('click', me.setFireEvent, me, 'invoice'),
             me.down('#return-btn').on('click', me.setFireEvent, me, 'return'),
             me.down('#reserve-btn').on('click', me.setFireEvent, me, 'reserve'),

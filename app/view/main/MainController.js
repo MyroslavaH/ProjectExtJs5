@@ -3,7 +3,7 @@
  * "autoCreateViewport" property. That setting automatically applies the "viewport"
  * plugin to promote that instance of this class to the body element.
  *
- * TODO - Replace this content of this view to suite the needs of your application.
+
  */
 Ext.define('ProjectExtJs5.view.main.MainController', {
     extend: 'Ext.app.ViewController',
@@ -12,6 +12,18 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     requires: [
         'Ext.window.MessageBox'
     ],
+//    views: [
+////        'menu.Main'
+////        'sale.InvoiceGrid'
+////        'sale.InvoiceContainer'
+//
+//    ],
+//    stores: [
+//        'InvoiceGrid'
+//    ],
+//    models: [
+//        'InvoiceGridModel'
+//    ],
 
     alias: 'controller.main',
 
