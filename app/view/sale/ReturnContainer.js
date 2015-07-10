@@ -5,9 +5,6 @@
 Ext.define('ProjectExtJs5.view.sale.ReturnContainer', {
     extend: 'Ext.panel.Panel',
     xtype:  'return-container',
-//    requires: ['ProjectExtJs5.view.sale.InvoiceContainer']
-
-
     layout: 'border',
     height: 500,
     width: 800,

@@ -7,10 +7,12 @@ Ext.define('ProjectExtJs5.model.InvoiceGridModel', {
 
     fields: [
         { name: 'numberOfInvoice', type: 'int'},
-//        { name: 'invoiceDate', type: 'Date'},
-        { name: 'customerName', type: 'string'},
+        { name: 'firstName', type: 'string'},
+        { name: 'lastName', type: 'string'},
         { name: 'sum', type: 'int'},
-        { name: 'comments', type: 'string'}
+        {name: 'currency', type:"string"}
+     //   { name: 'invoiceDate', type: 'Date'}
+//        { name: 'comments', type: 'string'}
 
     ]
 });

@@ -27,7 +27,7 @@ Ext.define('ProjectExtJs5.view.sale.ReserveContainer', {
                     text: 'New Reserve',
                     handler : function(){
                         var newInvoice = new Ext.Window({
-                            itemid: 'new-reserve',
+                            itemId: 'new-reserve',
                             title: 'New Reserve',
                             closable: true,
                             plain: true,
@@ -41,22 +41,6 @@ Ext.define('ProjectExtJs5.view.sale.ReserveContainer', {
                     }
 
                 }
-//                {
-//                    xtype: 'datefield',
-//                    anchor: '100%',
-//                    fieldLabel: 'Choose range',
-//                    name: 'from_date',
-//                    maxValue: new Date(),// limited to the current date or prior
-//                    format: 'd m Y'
-//                },
-//                {
-//                    xtype: 'datefield',
-//                    anchor: '100%',
-////                            fieldLabel: 'To',
-//                    name: 'to_date',
-//                    value: new Date(), // defaults to today
-//                    format: 'd m Y'
-//                }
 
             ]
         },
@@ -66,4 +50,13 @@ Ext.define('ProjectExtJs5.view.sale.ReserveContainer', {
             region: 'north'
         }
     ]
+//    initComponent: function () {
+//        var me = this;
+//        me.callParent(arguments);
+//        me.down('#new-reserve').on('click', me.setFireEvent, me, 'new return')
+//    },
+//    setFireEvent: function(scope, el, title){
+//        var tapPanel = this.down('#tapPanelLink');
+//        this.down('#tapPanelLink').fireEvent('openContainer', tapPanel, title)
+//    }
 });

@@ -3,10 +3,6 @@
  */
 Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
     extend: 'Ext.form.Panel',
-//    require:([
-//        'Ext.grid.*',
-//        'Ext.container.*'
-//    ]),
     xtype: 'new-invoice',
     itemId: 'new-invoice',
     renderTo: Ext.getBody(),
@@ -80,144 +76,12 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
         {
             xtype: 'component',
             height: 20
-        }
-//        {
-//            xtype: 'new-grid',
-//            height: 250
-//        }
-        ],
-//        Ext.onReady(function (tbar) {
-//            // Define our data model
-//            Ext.define('Stuff', {
-////        extend: 'Ext.data.Model',
-//                fields: ['name', 'amount', 'quantity', 'price', 'sum' ]
-//            }),
-//
-//
-//            {
-//                xtype: 'grid',
-//                itemId: 'grid-new',
-//                store: store,
-//                width: 650,
-//                height: 300,
-//                columns:
-//                    [
-//                        {
-//                            text: 'Id',
-//                            dataIndex: 'id',
-//                            hidden: true
-//
-//                        },
-//                        {
-//                            text: 'Name',
-//                            dataIndex: 'name',
-//                            sortable: true,
-//                            flex: 3,
-//                            editor: {
-//                                xtype: 'textfield',
-//                                allowBlank: false
-//                            }
-//                        },
-//                        {
-//                            text: 'Amount',
-//
-//                            dataIndex: 'amount',
-//                            sortable: true,
-//                            flex: 2,
-//                            editor: {
-//                                xtype: 'combobox',
-//                                allowBlank: false
-//                            }
-//                        },
-//                        {
-//                            text: 'Quantity',
-//                            sortable: true,
-//                            dataIndex: 'quantity',
-//                            flex: 2,
-//                            editor: {
-//                                xtype: 'textfield',
-//                                allowBlank: false
-//                            }
-//                        },
-//                        {
-//                            text: 'Price',
-//                            dataIndex: 'price',
-//                            sortable: true,
-//                            flex: 2,
-//                            editor: {
-//                                xtype: 'textfield',
-//                                allowBlank: false
-//                            }
-//                        },
-//                        {
-//                            text: 'Sum',
-//                            sortable: true,
-//                            dataIndex: 'sum',
-//                            flex: 2,
-//                            editor: {
-//                                xtype: 'textfield',
-//                                allowBlank: false
-//                            }
-//                        }
-//                    ]
-//            },
-//            {
-//
-//                tbar: [
-//                    {
-//                        text: 'Add',
-//                        handler: function () {
-//                            rowEditing.cancelEdit();
-//                            var add = Ext.create('Stuff', {
-//                                name: 'new',
-//                                amount: '1',
-//                                quantity: '',
-//                                price: '',
-//                                sum: ''
-//                            });
-//                            store.insert(0, add);
-//                            rowEditing.startEdit(0, 0);
-//                        }
-//                    },
-//                    {
-//                        text: 'Delete',
-//                        itemId: 'deleteEl',
-//                        handler: function () {
-//                            var del = '#grid-new'.getSelectionModel();
-//                            rowEditing.cancelEdit();
-//                            store.remove(del.getSelection());
-//                            if (store.getCount() > 0) {
-//                                del.select(0);
-//                            }
-//                        },
-//                        disabled: true
-//                    }
-//                ],
-//                plugins: [rowEditing],
-//                listeners: {
-//                    'selectionchange': function (view, records) {
-//                        '#grid-new'.down('#deleteEl').setDisabled(!records.length);
-//                    }
-//                }
-//            };
-//            var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
-//                clicksToMoveEditor: 1,
-//                autoCancel: false
-//            });
-//
-//
-////                plugins: {
-////                    ptype: 'rowediting',
-//////        clicksToEdit: 1,
-////                        clicksToMoveEditor: 1,
-////                        autoCancel: false
-////                },
-//
-////            {
-////                xtype: 'container',
-////                itemId: 'excellent-place'
-////            }
+        },
+        {
+            xtype: 'new-grid'
 
+        }
+        ],
         buttons: [{
             text: 'Reset',
             handler: function() {

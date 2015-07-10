@@ -26,14 +26,13 @@ Ext.define('ProjectExtJs5.view.payment.BankContainer', {
                     items: [{
                         xtype:'textfield',
                         fieldLabel: 'Name',
-//                afterLabelTextTpl: 'required',
                         allowBlank: false,
                         name: 'name',
                         anchor:'95%'
                     }, {
                         xtype: 'datefield',
                         fieldLabel: 'Choose date',
-                        maxValue: new Date(),// limited to the current date or prior
+                        maxValue: new Date(),
                         format: 'd / m / Y',
                         name: 'date',
                         anchor:'95%'
@@ -45,14 +44,12 @@ Ext.define('ProjectExtJs5.view.payment.BankContainer', {
                     items: [{
                         xtype:'textfield',
                         fieldLabel: 'Bank Account',
-//                afterLabelTextTpl: 'required',
                         allowBlank: false,
                         name: 'bank account',
                         anchor:'100%'
                     },{
                         xtype:'textfield',
                         fieldLabel: 'Currency',
-//                afterLabelTextTpl: 'required',
                         allowBlank: false,
                         name: 'currency',
                         anchor:'100%'

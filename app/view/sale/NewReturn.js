@@ -8,19 +8,12 @@ Ext.define('ProjectExtJs5.view.sale.NewReturn', {
         xtype: 'new-return',
         renderTo: Ext.getBody(),
         itemId: 'new-return',
-//        layout: 'anchor',
         defaults: {
             anchor: '100%'
         },
         height: 500,
         width: 700,
         bodyPadding: 10,
-//        collapsible: true,
-//        frame: true,
-//        fieldDefaults: {
-//            labelAlign: 'top',
-//            msgTarget: 'side'
-//        },
         layout: "vbox",
 
         items: [
@@ -43,7 +36,7 @@ Ext.define('ProjectExtJs5.view.sale.NewReturn', {
                     {
                         xtype: 'datefield',
                         fieldLabel: 'Choose date',
-                        maxValue: new Date(),// limited to the current date or prior
+                        maxValue: new Date(),
                         format: 'd / m / Y',
                         name: 'date',
                         anchor: '100% 10%'
@@ -61,7 +54,6 @@ Ext.define('ProjectExtJs5.view.sale.NewReturn', {
                     {
                         xtype: 'textfield',
                         fieldLabel: 'Phone',
-//                      afterLabelTextTpl: 'required',
                         allowBlank: false,
                         name: 'phone',
                         anchor: '100%'
@@ -83,164 +75,104 @@ Ext.define('ProjectExtJs5.view.sale.NewReturn', {
                 xtype: 'component',
                 height: 20
             },
-            {
-                xtype: 'container',
-                height: 40,
-                items: [
-                    {
-                        xtype: 'button',
-                        width: 100,
-                        itemId: 'create',
-                        text: 'Add'
-                    }
+            {xtype: "grid",
+                width: 680,
+                layout: "hbox",
+                columns: [
+                    {text: '№', dataIndex: 'id', flex: 1 },
+                    {text: 'Name', dataIndex: 'name', flex: 3},
+                    {text: 'Amount', dataIndex: 'amount', flex: 1},
+                    {text: 'Quantity', dataIndex: 'quantity', flex: 1},
+                    {text: 'Price', dataIndex: 'price', flex: 2},
+                    {text: 'Sum', dataIndex: 'sum', flex: 2}
                 ]
+
             },
             {
                 xtype: 'container',
-                layout: 'column',
-                width: 500,
-                height: 40,
-                items: [
-                    {
-                        title: '№',
-                        columnWidth: '0.2',
-                        layout: 'hbox'
-
-                    },
-                    {
-                        title: 'Goods',
-                        columnWidth: '0.4',
-                        layout: 'hbox'
-                    },
-                    {
-                        title: 'Value',
-                        columnWidth: '0.2',
-                        layout: 'hbox'
-                    },
-                    {
-                        title: 'Value',
-                        columnWidth: '0.2',
-                        layout: 'hbox'
-                    }
-
-
-                ]
-            },
-            {
-                xtype: 'container',
-                height: 50,
-                width: 500,
-                itemId: 'new-line',
                 layout: 'hbox',
-                items: [
+                width: 680,
+                items:[
+                    {
+                        xtype: 'numberfield',
+                        flex: 1
+                    },
                     {
                         xtype: 'textfield',
-                        width: 50,
-                        layout: 'hbox'
-
-                    },
-                    {
-                        xtype: 'combo',
-                        width: 250,
-                        layout: 'hbox'
+                        flex: 3
                     },
                     {
                         xtype: 'numberfield',
-                        layout: 'hbox',
-                        width: 100
+                        flex: 1,
+                        minValue: 0,
+                        value: 1
                     },
                     {
-                        xtype: 'textfield',
-                        width: 100,
-                        layout: 'hbox'
+                        xtype: 'combobox',
+                        flex: 1
+                    },
+                    {
+                        xtype: 'numberfield',
+                        editable: true,
+                        flex: 2
+                    },
+                    {
+                        xtype: 'numberfield',
+                        editable: true,
+                        flex: 2
                     }
 
-
                 ]
-
             },
             {
+                xtype: 'button',
+                width: 70,
+                height: 30,
+                itemId: 'create',
+                text: 'Add'
+            },
+
+            {
                 xtype: 'gridpanel',
-                width: 650,
-                height: 300,
-//                title: 'New',
-//                store: 'ModelCars',
-                columns: [
-                    {
-                        text: 'Id',
-                        hidden: true,
-                        dataIndex: 'id'
-                    },
-                    {
-                        text: 'Name',
-                        sortable: true,
-                        dataIndex: 'name',
-                        flex: 3,
-                        editor: {
-                            xtype: 'textfield',
-                            allowBlank: false
-                        }
-                    },
-                    {
-                        text: 'Amount',
-                        sortable: true,
-                        dataIndex: 'vendorName',
-                        flex: 2,
-                        editor: {
-                            xtype: 'combobox',
-//                            store: 'Vendors',
-                            displayField: 'name',
-                            valueField: 'name',
-                            editable: false,
-                            queryMode: 'local',
-                            forceSelection: true,
-                            triggerAction: 'all',
-                            allowBlank: false
-                        }
-                    },
-                    {
-                        text: 'Quantity',
-                        sortable: true,
-                        dataIndex: 'category',
-                        flex: 2,
-                        editor: {
-                            xtype: 'textfield',
-                            allowBlank: false
-                        }
-                    },
-                    {
-                        text: 'Price',
-                        sortable: true,
-                        dataIndex: 'category',
-                        flex: 2,
-                        editor: {
-                            xtype: 'textfield',
-                            allowBlank: false
-                        }
-                    },
-                    {
-                        text: 'Sum',
-                        sortable: true,
-                        dataIndex: 'category',
-                        flex: 2,
-                        editor: {
-                            xtype: 'textfield',
-                            allowBlank: false
-                        }
-
-                    }
-
-
-                ]
-
+                itemId: 'empty-grid',
+                store: 'ProjectExtJs5.store.NewReturnStore'
+                //renderTo: Ext.getBody(),
+//                initComponent: function () {
+//                    var me = this;
+//                    me.callParent(arguments);
+//                }
+//                width: 680,
+//                height: 300,
+//                layout: "hbox",
+//                items: [
+//                    {
+//                        xtype: 'textfield',
+//                        flex: 1
+//                    },
+//                    {
+//                        xtype: 'textfield',
+//                        flex: 3
+//                    },
+//                    {
+//                        xtype: 'textfield',
+//                        flex: 1
+//                    },
+//                    {
+//                        xtype: 'textfield',
+//                        flex: 1
+//                    },
+//                    {
+//                        xtype: 'textfield',
+//                        flex: 2
+//                    },
+//                    {
+//                        xtype: 'textfield',
+//                        flex: 3
+//                    }
+//                ]
             }
-
-
-//            {
-//                xtype: 'container',
-//                itemId: 'excellent-place'
-//            }
         ],
+
 
 
         buttons: [{
@@ -269,4 +201,6 @@ Ext.define('ProjectExtJs5.view.sale.NewReturn', {
             }]
 
     }
+
+
 );

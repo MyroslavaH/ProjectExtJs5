@@ -76,10 +76,24 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         } else if (name === 'cash') {
             container = Ext.create('ProjectExtJs5.view.payment.CashContainer', {
             });
-        } else {
+        } else if (name === 'bank'){
             container = Ext.create('ProjectExtJs5.view.payment.BankContainer', {
             });
         }
+
+
+//        else if (name === 'new return'){
+//                container = Ext.create('ProjectExtJs5.view.sale.NewReturn', {
+//                });
+//            }
+//            else if (name === 'new invoice'){
+//                container = Ext.create('ProjectExtJs5.view.sale.NewInvoice', {
+//                });
+//        }
+//        else {
+//            container = Ext.create('ProjectExtJs5.view.sale.NewReserve', {
+//            });
+//        }
 //        if(name == 'invoice' ){
 //                container = Ext.create('ProjectExtJs5.view.sale.InvoiceContainer', {
 //
@@ -101,9 +115,6 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     toUpperFirsLetter: function(str){
         return str.substr(0,1).toUpperCase()+ str.substr(1);
     },
-
-
-
 
     onConfirm: function (choice) {
         if (choice === 'yes') {

@@ -6,8 +6,8 @@ Ext.define('ProjectExtJs5.view.sale.NewReserve', {
         extend: 'Ext.form.Panel',
 
         xtype: 'new-reserve',
-        renderTo: Ext.getBody(),
-        itemid: 'new-reserve',
+       // renderTo: Ext.getBody(),
+        itemId: 'new-reserve',
 //        layout: 'anchor',
         defaults: {
             anchor: '100%'

@@ -35,8 +35,8 @@ Ext.define('ProjectExtJs5.view.main.Main', {
         'ProjectExtJs5.view.payment.CashContainer',
         'ProjectExtJs5.view.payment.CashGrid',
         'ProjectExtJs5.view.payment.BankContainer',
-        'ProjectExtJs5.view.payment.BankGrid'
-//        'ProjectExtJs5.view.sale.Grid'
+        'ProjectExtJs5.view.payment.BankGrid',
+        'ProjectExtJs5.view.sale.Grid'
 
     ],
 
@@ -83,7 +83,9 @@ Ext.define('ProjectExtJs5.view.main.Main', {
             me.down('#cash-btn').on('click', me.setFireEvent, me, 'cash'),
             me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
             me.down('#new-customer-btn').on('click', me.setFireEvent, me, 'new customer'),
-            me.down('#all-customers').on('click', me.setFireEvent, me, 'all customers')
+            me.down('#all-customers').on('click', me.setFireEvent, me, 'all customers');
+
+
 //        me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
 //        me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
 //        me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank')

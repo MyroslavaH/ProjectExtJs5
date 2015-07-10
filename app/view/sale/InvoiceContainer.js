@@ -43,15 +43,14 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceContainer', {
                     anchor: '100%',
                     fieldLabel: 'Choose range',
                     name: 'from_date',
-                    maxValue: new Date(),// limited to the current date or prior
+                    maxValue: new Date(),
                     format: 'd m Y'
                 },
                 {
                     xtype: 'datefield',
                     anchor: '100%',
-//                            fieldLabel: 'To',
                     name: 'to_date',
-                    value: new Date(), // defaults to today
+                    value: new Date(),
                     format: 'd m Y'
                 }
 
@@ -68,7 +67,12 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceContainer', {
     initComponent: function () {
         var me = this;
         me.callParent(arguments);
-    }
+//    me.down('#new-invoice').on('click', me.setFireEvent, me, 'new invoice')
+//},
+//setFireEvent: function(scope, el, title){
+//    var tapPanel = this.down('#tapPanelLink');
+//    this.down('#tapPanelLink').fireEvent('openContainer', tapPanel, title)
+}
 
 
 

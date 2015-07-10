@@ -26,7 +26,7 @@ Ext.define('ProjectExtJs5.view.sale.ReturnGrid', {
     extend: 'Ext.grid.Panel',
     title: 'All Returns',
     xtype: 'return-grid',
-    itemid: 'return-grid',
+    itemId: 'return-grid',
     store: Ext.data.StoreManager.lookup('returnStore'),
     columns: [
         { text: 'Number',  dataIndex: 'number', width: 100},

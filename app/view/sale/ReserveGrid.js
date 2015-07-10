@@ -26,7 +26,7 @@ Ext.define('ProjectExtJs5.view.sale.ReserveGrid', {
     extend: 'Ext.grid.Panel',
     title: 'All Reserves',
     xtype: 'reserve-grid',
-    itemid: 'reserve-grid',
+    itemId: 'reserve-grid',
     store: Ext.data.StoreManager.lookup('reserveStore'),
     columns: [
         { text: 'Number',  dataIndex: 'number', width: 100},

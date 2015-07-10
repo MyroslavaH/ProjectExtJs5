@@ -1,8 +1,8 @@
 {
     "invoice-gr": [
-        { "number": "243", "name": "Lisa", "sum":"224", "currency": "UAH", "date": "01/06/2015", "about": "bhjcdsc" },
-        { "number": "233", "name": "Bart", "sum":"1234", "currency": "USD", "date": "05/06/2015", "about": "bttttjcdsc"},
-        { "number": "243", "name": "Homer", "sum":"555", "currency": "EUR", "date": "02/06/2015", "about": "bhjcdccsc"},
-        { "number": "243", "name": "Marge", "sum":"554", "currency": "EUR", "date": "10/06/2015", "about": "bhjcdsyc"}
+        { "numberOfInvoice": "243", "firstName": "Lisa", "lastName": "fgfg",  "sum":"224", "currency": "UAH", "date": "01/06/2015"},
+        { "numberOfInvoice": "233", "firstName": "Bart", "lastName": "fijfg","sum":"1234", "currency": "USD", "date": "05/06/2015"},
+        { "numberOfInvoice": "243", "firstName": "Homer","lastName": "fhhgfg", "sum":"555", "currency": "EUR", "date": "02/06/2015"},
+        { "numberOfInvoice": "243", "firstName": "Marge", "lastName": "fgfghh", "sum":"554", "currency": "EUR", "date": "10/06/2015"}
     ]
 }
