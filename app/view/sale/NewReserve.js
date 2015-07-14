@@ -12,8 +12,8 @@ Ext.define('ProjectExtJs5.view.sale.NewReserve', {
         defaults: {
             anchor: '100%'
         },
-        height: 500,
-        width: 700,
+        height: 600,
+        width: 900,
 
         bodyPadding: 10,
 
@@ -22,45 +22,75 @@ Ext.define('ProjectExtJs5.view.sale.NewReserve', {
             {
                 xtype: 'container',
                 layout: 'hbox',
-                items:[
+                items: [
                     {
-                        xtype:'textfield',
+                        xtype: 'textfield',
                         emptyText: 'Name',
-//                afterLabelTextTpl: 'required',
-                        allowBlank: false,
-                        name: 'name',
-                        itemId: 'reserve-name',
-                        anchor:'95%'
-                    }, {
-                        xtype: 'datefield',
-                        emptyText: 'Choose date',
-                        maxValue: new Date(),// limited to the current date or prior
-                        format: 'd / m / Y',
-                        itemId: 'reserve-date',
-                        name: 'date',
-                        anchor:'95%'
-                    },{
-                        xtype:'textfield',
-                        emptyText: 'Phone',
-                        itemId: 'reserve-phone',
-//                afterLabelTextTpl: 'required',
-                        allowBlank: false,
-                        name: 'phone',
-                        anchor:'100%'
-                    },{
-                        xtype:'textfield',
-                        emptyText: 'Description',
-//                afterLabelTextTpl: 'required',
-                        allowBlank: false,
-                        itemId: 'reserve-about',
-                        name: 'description',
-                        anchor:'100%'
+                        width: 200
                     },
+                    {
+                        xtype: 'component',
+                        width: 50
+                    },
+                    {
+                        xtype:'datefield',
+                        format: 'd / m / Y',
+                        maxValue: new Date(),
+                        emptyText: 'Date',
+                        width: 200
+                    }
+
+                ]
+            },
+            {
+                xtype: 'component',
+                height: 20
+            },
+            {
+                xtype: 'container',
+                layout: 'hbox',
+                width: 800,
+                items:[
                     {
                         xtype:'button',
                         text:"Add",
-                        itemId: 'add-new-reserve'
+                        itemId: 'add-new-reserve',
+                        width: 50
+                    },
+
+                   {
+                        xtype:'textfield',
+                        emptyText: 'goods',
+                        allowBlank: false,
+                        name: 'goods',
+                        itemId: 'reserve-goods',
+                       flex: 1
+                    },
+                    {
+                        xtype: 'numberfield',
+                        emptyText: 'choose amount',
+                        itemId: 'reserve-amount',
+                        name: 'amount',
+                        flex: 1
+                    },
+                    {
+                        xtype:'numberfield',
+                        emptyText: 'price',
+                        itemId: 'reserve-price',
+//                afterLabelTextTpl: 'required',
+                        allowBlank: false,
+                        name: 'price',
+                        flex: 1
+                    },{
+                        xtype:'numberfield',
+                        emptyText: 'sum',
+//                afterLabelTextTpl: 'required',
+                        allowBlank: false,
+                        itemId: 'reserve-sum',
+                        name: 'sum',
+                        flex: 1
                     }
+
                 ]},
 
             {
@@ -68,7 +98,7 @@ Ext.define('ProjectExtJs5.view.sale.NewReserve', {
                 itemId: 'reserve-grid',
 //                data:[] ,
                 store: Ext.create('ProjectExtJs5.store.NewReserveStore')
-            }]     ,
+            }],
 
         initComponent: function () {
             var me = this;
@@ -78,15 +108,15 @@ Ext.define('ProjectExtJs5.view.sale.NewReserve', {
 
         onAddNewReserve: function(){
             var store = this.down('#reserve-grid').getStore();
-            var name = this.down('#reserve-name').getValue();
-            var date = this.down('#reserve-date').getValue();
-            var phone = this.down('#reserve-phone').getValue();
-            var about = this.down('#reserve-about').getValue();
+            var goods = this.down('#reserve-goods').getValue();
+            var amount = this.down('#reserve-amount').getValue();
+            var price = this.down('#reserve-price').getValue();
+            var sum = this.down('#reserve-sum').getValue();
             var data = {
-                goods:name,
-                phone:phone,
-                date:date,
-                about: about
+                goods:goods,
+                price:price,
+                amount:amount,
+                sum: sum
 
             }
             store.add(data)
