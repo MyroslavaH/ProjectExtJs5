@@ -1,5 +1,5 @@
 /**
- * Created by Iryna on 13.07.2015.
+ * Created by Myroslava on 13.07.2015.
  */
 
 Ext.define('ProjectExtJs5.store.NewReserveStore', {
