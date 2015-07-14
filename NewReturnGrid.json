@@ -1,6 +1,6 @@
 {
     "return-new": [
-        { "number": "1", "goods": "Lisa", "amount":"2" , "price": "1", "sum": "8"},
+        { "number": "1", "name": "Lisa", "amount":"2" , "price": "1", "sum": "8"},
         { "number": "2", "goods": "Homer", "amount":"2" ,  "price": "4", "sum": "8"},
         { "number": "3", "goods": "Marge", "amount": "1",  "price": "3", "sum": "3"}
     ]

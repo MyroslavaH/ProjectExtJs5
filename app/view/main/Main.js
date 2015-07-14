@@ -65,6 +65,7 @@ Ext.define('ProjectExtJs5.view.main.Main', {
             {
                 region: 'center',
                 itemId: 'tapPanelLink',
+                id: 'tapPanelLink',
                 xtype: 'tabpanel',
                 reference: 'tapPanelLink'
 

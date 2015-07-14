@@ -6,6 +6,7 @@ Ext.define('ProjectExtJs5.model.NewReturnModel', {
     fields: [
         { name: 'number', type: 'int' },
         { name: 'goods', type: 'string' },
+        { name: 'date', type: 'date' },
         { name: 'amount', type: 'int' },
         { name: 'price', type: 'int' },
         { name: 'sum', type: 'int' }

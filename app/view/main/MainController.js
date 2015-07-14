@@ -79,6 +79,9 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         } else if (name === 'bank'){
             container = Ext.create('ProjectExtJs5.view.payment.BankContainer', {
             });
+        } else if (name === 'new reserve'){
+            container = Ext.create('ProjectExtJs5.view.sale.NewReserve', {
+            });
         }
 
 

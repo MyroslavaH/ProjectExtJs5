@@ -8,6 +8,7 @@ Ext.define('ProjectExtJs5.view.sale.ReserveContainer', {
     layout: 'border',
     height: 500,
     width: 800,
+    controller: 'main',
 
     items: [
         {
@@ -24,6 +25,7 @@ Ext.define('ProjectExtJs5.view.sale.ReserveContainer', {
 //                    region: 'center',
                     height: 40,
                     width: 100,
+                    itemId:'new-reserve-btn',
                     text: 'New Reserve',
                     handler : function(){
                         var newInvoice = new Ext.Window({
@@ -49,14 +51,14 @@ Ext.define('ProjectExtJs5.view.sale.ReserveContainer', {
             xtype: 'reserve-grid',
             region: 'north'
         }
-    ]
-//    initComponent: function () {
-//        var me = this;
-//        me.callParent(arguments);
-//        me.down('#new-reserve').on('click', me.setFireEvent, me, 'new return')
-//    },
+    ],
+    initComponent: function () {
+        var me = this;
+        me.callParent(arguments);
+//        me.down('#new-reserve-btn').on('click', me.setFireEvent, me, 'new reserve')
+    },
 //    setFireEvent: function(scope, el, title){
-//        var tapPanel = this.down('#tapPanelLink');
-//        this.down('#tapPanelLink').fireEvent('openContainer', tapPanel, title)
+//        var tapPanel = Ext.get('tapPanelLink').component;
+//        tapPanel.fireEvent('openContainer', tapPanel, title)
 //    }
 });

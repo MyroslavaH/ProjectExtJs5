@@ -3,121 +3,93 @@
  */
 
 Ext.define('ProjectExtJs5.view.sale.NewReserve', {
-        extend: 'Ext.form.Panel',
+        extend: 'Ext.panel.Panel',
 
         xtype: 'new-reserve',
-       // renderTo: Ext.getBody(),
+        // renderTo: Ext.getBody(),
         itemId: 'new-reserve',
-//        layout: 'anchor',
+//        layout: 'border',
         defaults: {
             anchor: '100%'
         },
         height: 500,
         width: 700,
+
         bodyPadding: 10,
-//        collapsible: true,
-//        frame: true,
-//        fieldDefaults: {
-//            labelAlign: 'top',
-//            msgTarget: 'side'
-//        },
-
-        items: [{
-            xtype: 'container',
-            anchor: '100%',
-            layout: 'hbox',
-            items:[{
-                xtype: 'container',
-                flex: 1,
-                layout: 'anchor',
-                items: [{
-                    xtype:'textfield',
-                    fieldLabel: 'Name',
-//                afterLabelTextTpl: 'required',
-                    allowBlank: false,
-                    name: 'name',
-                    anchor:'95%'
-                }, {
-                    xtype: 'datefield',
-                    fieldLabel: 'Choose date',
-                    maxValue: new Date(),// limited to the current date or prior
-                    format: 'd / m / Y',
-                    name: 'date',
-                    anchor:'95%'
-                }]
-            },{
-                xtype: 'container',
-                flex: 1,
-                layout: 'anchor',
-                items: [{
-                    xtype:'textfield',
-                    fieldLabel: 'Phone',
-//                afterLabelTextTpl: 'required',
-                    allowBlank: false,
-                    name: 'phone',
-                    anchor:'100%'
-                },{
-                    xtype:'textfield',
-                    fieldLabel: 'Description',
-//                afterLabelTextTpl: 'required',
-                    allowBlank: false,
-                    name: 'description',
-                    anchor:'100%'
-                }]
-            }]
-//           items: [{
-//               region: 'south',
-//
-//
-//            extend: 'Ext.grid.panel',
-//            layout: 'hbox',
-//            title: 'All Invoices',
-//            xtype: 'invoice-grid',
-//            itemid: 'invoice-grid',
-//            store: Ext.data.StoreManager.lookup('invoiceStore'),
-//            columns: [
-//                { text: 'Number',  dataIndex: 'number', width: 100},
-//                { text: 'Name',  dataIndex: 'name', flex: 1 },
-//                { text: 'Sum', dataIndex: 'sum',flex: 1 },
-//                { text: 'Currency', dataIndex: 'currency',width: 100 },
-//                { text: 'Date', dataIndex: 'date',width: 100 },
-//                { text: 'About', dataIndex: 'about',flex: 1}
-//            ],
-//            height: 450,
-//            width: 800,
-//            renderTo: Ext.getBody()
-//           }
-//]
 
 
-        }],
-
-
-
-        buttons: [{
-            text: 'Reset',
-            handler: function() {
-                this.up('form').getForm().reset();
-            }
-        },
+        items: [
             {
-                text: 'Submit',
-                formBind: true, //only enabled once the form is valid
-                disabled: true,
-                handler: function() {
-                    var form = this.up('form').getForm();
-                    if (form.isValid()) {
-                        form.submit({
-                            success: function(form, action) {
-                                Ext.Msg.alert('Success', action.result.msg);
-                            },
-                            failure: function(form, action) {
-                                Ext.Msg.alert('Failed', action.result.msg);
-                            }
-                        });
+                xtype: 'container',
+                layout: 'hbox',
+                items:[
+                    {
+                        xtype:'textfield',
+                        emptyText: 'Name',
+//                afterLabelTextTpl: 'required',
+                        allowBlank: false,
+                        name: 'name',
+                        itemId: 'reserve-name',
+                        anchor:'95%'
+                    }, {
+                        xtype: 'datefield',
+                        emptyText: 'Choose date',
+                        maxValue: new Date(),// limited to the current date or prior
+                        format: 'd / m / Y',
+                        itemId: 'reserve-date',
+                        name: 'date',
+                        anchor:'95%'
+                    },{
+                        xtype:'textfield',
+                        emptyText: 'Phone',
+                        itemId: 'reserve-phone',
+//                afterLabelTextTpl: 'required',
+                        allowBlank: false,
+                        name: 'phone',
+                        anchor:'100%'
+                    },{
+                        xtype:'textfield',
+                        emptyText: 'Description',
+//                afterLabelTextTpl: 'required',
+                        allowBlank: false,
+                        itemId: 'reserve-about',
+                        name: 'description',
+                        anchor:'100%'
+                    },
+                    {
+                        xtype:'button',
+                        text:"Add",
+                        itemId: 'add-new-reserve'
                     }
-                }
-            }]
+                ]},
 
+            {
+                xtype:'reserve-grid',
+                itemId: 'reserve-grid',
+//                data:[] ,
+                store: Ext.create('ProjectExtJs5.store.NewReserveStore')
+            }]     ,
+
+        initComponent: function () {
+            var me = this;
+            me.callParent(arguments);
+            this.down('#add-new-reserve').setHandler('onAddNewReserve', this)
+        },
+
+        onAddNewReserve: function(){
+            var store = this.down('#reserve-grid').getStore();
+            var name = this.down('#reserve-name').getValue();
+            var date = this.down('#reserve-date').getValue();
+            var phone = this.down('#reserve-phone').getValue();
+            var about = this.down('#reserve-about').getValue();
+            var data = {
+                goods:name,
+                phone:phone,
+                date:date,
+                about: about
+
+            }
+            store.add(data)
+        }
     }
 );
