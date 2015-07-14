@@ -95,7 +95,6 @@ Ext.define('ProjectExtJs5.view.main.Main', {
     },
 
     setFireEvent: function(scope, el, title){
-        var tapPanel = this.down('#tapPanelLink');
-        this.down('#tapPanelLink').fireEvent('openContainer', tapPanel, title)
+        this.down('#tapPanelLink').fireEvent('openContainer', title)
     }
 });

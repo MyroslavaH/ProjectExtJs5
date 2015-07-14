@@ -43,17 +43,18 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     ],
     init: function(){
         this.control({
-            '#invoice-btn':{
-//                click: this.onInvoiceBtnClick
-            },
             '#tapPanelLink':{
                 'openContainer': this.openNewTap
+            },
+            'reserve-container':{
+                'openNewReserve': this.openNewTap
             }
         })
     },
 
-    openNewTap: function(tabPanel, name){
+    openNewTap: function(name){
         var container;
+        var tabPanel = Ext.getCmp('tapPanelLink');
 
         if (name === 'invoice') {
             container = Ext.create('ProjectExtJs5.view.sale.InvoiceContainer', {
@@ -108,27 +109,23 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
 //                });
 //        }
         name = this.toUpperFirsLetter(name);
-        tabPanel.add({
-                title: name,
-                closable: true,
-                items: container
-            }
-        )
+        var tab = tabPanel.add({
+            title: name,
+            layout: {
+                type: 'vbox',
+                align: 'stretch',
+                pack: 'start'
+            },
+            closable:true,
+            border: false,
+            items: container
+
+        });
+
+        tabPanel.doLayout();
+        tabPanel.setActiveTab(tab);
     },
     toUpperFirsLetter: function(str){
         return str.substr(0,1).toUpperCase()+ str.substr(1);
-    },
-
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            //
-        }
     }
-//    onRowEditorEdit: function (editor, ctx, eOpts) {
-//        var vendorColIdx = 2;
-//        var combo = ctx.Grid.columns[vendorColIdx].getEditor(ctx.record);
-//        var vendorRecord = combo.findRecord('name', combo.getValue());
-//        ctx.record.set('vendorId', vendorRecord.get('id'));
-//        ctx.Grid.getStore().sync();  // Force a post with the updated data.
-//    }
 });
