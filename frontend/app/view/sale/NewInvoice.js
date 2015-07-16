@@ -85,7 +85,7 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
 
             {
                 xtype:'reserve-grid',
-                itemId: 'reserve-grid',
+                itemId: 'new-grid',
 //                data:[] ,
                 store: Ext.create('ProjectExtJs5.store.NewReserveStore')
             },
@@ -102,7 +102,7 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
         },
 
         onAddNewInvoice: function(){
-            var store = this.down('#reserve-grid').getStore();
+            var store = this.down('#new-grid').getStore();
             var goods = this.down('#invoice-goods').getValue();
             var amount = this.down('#invoice-amount').getValue();
             var price = this.down('#invoice-price').getValue();

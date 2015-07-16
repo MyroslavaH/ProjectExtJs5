@@ -27,9 +27,9 @@ Ext.define('ProjectExtJs5.Application', {
 //        'MainModel',
 //        'NewCustomer'
     ],
-    controllers:[
+//    controllers:[
 //        'MainController'
-],
+//],
 //
     launch: function () {
         // TODO - Launch the application
