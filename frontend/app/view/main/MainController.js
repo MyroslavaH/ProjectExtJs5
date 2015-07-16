@@ -8,12 +8,7 @@
 Ext.define('ProjectExtJs5.view.main.MainController', {
     extend: 'Ext.app.ViewController',
 
-
-    requires: [
-        'Ext.window.MessageBox'
-    ],
-
-    alias: 'controller.main'    ,
+    alias: 'controller.main',
     init: function(){
         this.control({
             '#tapPanelEl':{
@@ -88,9 +83,7 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
             success: function(response){
                 var text = response.responseText;
                 var data = JSON.parse(text);
-//
-
-                   store.loadData(data, false)
+                store.loadData(data, false)
             },
             error:function(){
                 console.log('Faild');

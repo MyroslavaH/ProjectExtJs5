@@ -13,12 +13,10 @@ Ext.define('ProjectExtJs5.view.main.Main', {
     ],
 
     xtype: 'app-main',
-
     controller: 'main',
     viewModel: {
         type: 'main'
     },
-
     layout: {
         type: 'border'
     },
@@ -42,6 +40,7 @@ Ext.define('ProjectExtJs5.view.main.Main', {
 
             }
         ],
+
     initComponent: function () {
             var me = this;
             me.callParent(arguments);
@@ -55,13 +54,6 @@ Ext.define('ProjectExtJs5.view.main.Main', {
             me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
             me.down('#new-customer-btn').on('click', me.setFireEvent, me, 'new customer'),
             me.down('#all-customers').on('click', me.setFireEvent, me, 'all customers');
-
-
-//        me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
-//        me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
-//        me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank')
-
-
     },
 
     setFireEvent: function(scope, el, title){

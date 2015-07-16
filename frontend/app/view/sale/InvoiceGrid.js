@@ -8,12 +8,12 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceGrid', {
     extend: 'Ext.grid.Panel',
     title: 'All Invoices',
     xtype: 'invoice-grid',
-//    controller: 'main',
     reference: 'invoice-grid',
     store: Ext.getStore('ProjectExtJs5.store.InvoiceGrid'),
     columns: [
         {
-            xtype: 'rownumberer'
+            xtype: 'rownumberer',
+            width:40,
         },
         { text: 'Name',  dataIndex: 'name', flex: 1 },
         { text: 'Sum', dataIndex: 'sum',flex: 1},
