@@ -5,7 +5,6 @@
 Ext.define('ProjectExtJs5.view.sale.ReserveGrid', {
 
     extend: 'Ext.grid.Panel',
-//    title: 'All Reserves',
     xtype: 'reserve-grid',
     itemId: 'reserve-grid',
     store: Ext.create('ProjectExtJs5.store.NewReturnStore'),
@@ -15,11 +14,8 @@ Ext.define('ProjectExtJs5.view.sale.ReserveGrid', {
         { text: 'Amount', dataIndex: 'amount',flex: 1},
         { text: 'Price', dataIndex: 'price',flex: 1  },
         { text: 'Sum', dataIndex: 'sum',flex: 1 }
-
-
-
     ],
     height: 450,
-    width: 800,
+    flex: 1,
     renderTo: Ext.getBody()
 });

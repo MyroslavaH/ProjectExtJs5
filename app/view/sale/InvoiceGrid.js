@@ -9,7 +9,7 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceGrid', {
     itemId: 'invoice-grid',
     store: Ext.create('ProjectExtJs5.store.InvoiceGrid'),
     columns: [
-        { text: '№',  dataIndex: 'number', width: 50},
+        { text: '№',  dataIndex: 'number', width: 80},
         { text: 'Name',  dataIndex: 'name', flex: 1 },
         { text: 'Sum', dataIndex: 'sum',flex: 1},
         { text: 'Date', dataIndex: 'date',flex: 1  }

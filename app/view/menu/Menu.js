@@ -31,7 +31,7 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
     items: [
         {
             xtype: 'panel',
-            title: 'sale',
+            title: 'Sale',
             cls:'menu-panel',
             region: 'west',
             width: 200,
@@ -52,14 +52,14 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
                     itemId: 'invoice-btn',
                     cls: 'button-style open'
                 },
-                {
-                    xtype: 'button',
-                    text: 'Return',
-                    width: 200,
-                    cls: 'button-style open',
-                    itemId: 'return-btn'
-//
-                },
+//                {
+//                    xtype: 'button',
+//                    text: 'Return',
+//                    width: 200,
+//                    cls: 'button-style open',
+//                    itemId: 'return-btn'
+////
+//                },
                 {
                     xtype: 'button',
                     text: 'Reserve',

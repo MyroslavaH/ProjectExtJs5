@@ -12,18 +12,6 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     requires: [
         'Ext.window.MessageBox'
     ],
-//    views: [
-////        'menu.Main'
-////        'sale.InvoiceGrid'
-////        'sale.InvoiceContainer'
-//
-//    ],
-//    stores: [
-//        'InvoiceGrid'
-//    ],
-//    models: [
-//        'InvoiceGridModel'
-//    ],
 
     alias: 'controller.main',
 
@@ -59,9 +47,9 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         if (name === 'invoice') {
             container = Ext.create('ProjectExtJs5.view.sale.InvoiceContainer', {
             });
-        } else if (name === 'return') {
-            container = Ext.create('ProjectExtJs5.view.sale.ReturnContainer', {
-            });
+//        } else if (name === 'return') {
+//            container = Ext.create('ProjectExtJs5.view.sale.ReturnContainer', {
+//            });
         } else if (name === 'reserve') {
             container = Ext.create('ProjectExtJs5.view.sale.ReserveContainer', {
             });
@@ -80,8 +68,8 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         } else if (name === 'bank'){
             container = Ext.create('ProjectExtJs5.view.payment.BankContainer', {
             });
-        } else if (name === 'new reserve'){
-            container = Ext.create('ProjectExtJs5.view.sale.NewReserve', {
+        } else if (name === 'new invoice'){
+            container = Ext.create('ProjectExtJs5.view.sale.NewInvoice', {
             });
         }
 
@@ -127,5 +115,9 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     },
     toUpperFirsLetter: function(str){
         return str.substr(0,1).toUpperCase()+ str.substr(1);
+    },
+
+    submitNewInvoice: function(){
+        console.log("New invoice submited")
     }
 });

@@ -16,12 +16,12 @@ Ext.define('ProjectExtJs5.view.main.Main', {
         'ProjectExtJs5.view.sale.InvoiceGrid',
         'ProjectExtJs5.view.sale.InvoiceContainer',
         'ProjectExtJs5.view.sale.NewInvoice',
-        'ProjectExtJs5.view.sale.ReturnContainer',
-        'ProjectExtJs5.view.sale.ReturnGrid',
-        'ProjectExtJs5.view.sale.NewReturn',
+       // 'ProjectExtJs5.view.sale.ReturnContainer',
+       // 'ProjectExtJs5.view.sale.ReturnGrid',
+       // 'ProjectExtJs5.view.sale.NewReturn',
         'ProjectExtJs5.view.sale.ReserveContainer',
         'ProjectExtJs5.view.sale.ReserveGrid',
-        'ProjectExtJs5.view.sale.NewReserve',
+       // 'ProjectExtJs5.view.sale.NewReserve',
         'ProjectExtJs5.view.buying.PurchaseContainer',
         'ProjectExtJs5.view.buying.PurchaseGrid',
         'ProjectExtJs5.view.buying.NewPurchase',
@@ -75,7 +75,7 @@ Ext.define('ProjectExtJs5.view.main.Main', {
             var me = this;
             me.callParent(arguments);
             me.down('#invoice-btn').on('click', me.setFireEvent, me, 'invoice'),
-            me.down('#return-btn').on('click', me.setFireEvent, me, 'return'),
+           // me.down('#return-btn').on('click', me.setFireEvent, me, 'return'),
             me.down('#reserve-btn').on('click', me.setFireEvent, me, 'reserve'),
             me.down('#purchase-btn').on('click', me.setFireEvent, me, 'purchase'),
             me.down('#buy-return-btn').on('click', me.setFireEvent, me, 'buy return'),
@@ -85,13 +85,6 @@ Ext.define('ProjectExtJs5.view.main.Main', {
             me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
             me.down('#new-customer-btn').on('click', me.setFireEvent, me, 'new customer'),
             me.down('#all-customers').on('click', me.setFireEvent, me, 'all customers');
-
-
-//        me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
-//        me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
-//        me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank')
-
-
     },
 
     setFireEvent: function(scope, el, title){
