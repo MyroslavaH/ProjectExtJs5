@@ -6,8 +6,9 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceGrid', {
     extend: 'Ext.grid.Panel',
     title: 'All Invoices',
     xtype: 'invoice-grid',
-    itemId: 'invoice-grid',
-    store: Ext.create('ProjectExtJs5.store.InvoiceGrid'),
+//    controller: 'main',
+    reference: 'invoice-grid',
+    store: Ext.data.StoreManager.lookup('invoiceStore'),
     columns: [
         { text: '№',  dataIndex: 'number', width: 50},
         { text: 'Name',  dataIndex: 'name', flex: 1 },
@@ -16,7 +17,11 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceGrid', {
     ],
     height: 450,
     width: 800,
-    renderTo: Ext.getBody()
+    renderTo: Ext.getBody(),
+    initComponent: function () {
+        var me = this;
+        me.callParent(arguments);
+    }
 });
 
 

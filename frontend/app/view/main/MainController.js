@@ -12,35 +12,8 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     requires: [
         'Ext.window.MessageBox'
     ],
-//    views: [
-////        'menu.Main'
-////        'sale.InvoiceGrid'
-////        'sale.InvoiceContainer'
-//
-//    ],
-//    stores: [
-//        'InvoiceGrid'
-//    ],
-//    models: [
-//        'InvoiceGridModel'
-//    ],
 
-    alias: 'controller.main',
-
-    refs:[
-        {
-            ref: 'tapPanel',
-            selector: '#tapPanelLink'
-        },
-        {
-            ref: 'main',
-            selector: 'app-main'
-        },
-        {
-            ref: 'invoiceBtn',
-            selector: '#invoice-btn'
-        }
-    ],
+    alias: 'controller.main'    ,
     init: function(){
         this.control({
             '#tapPanelLink':{
@@ -48,7 +21,10 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
             },
             'reserve-container':{
                 'openNewReserve': this.openNewTap
-            }
+            },
+//            '#invoice-btn':{
+//                click:this.openNewTap
+//            }
         })
     },
 
@@ -127,5 +103,30 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     },
     toUpperFirsLetter: function(str){
         return str.substr(0,1).toUpperCase()+ str.substr(1);
+    },
+
+    loadInvoiceStore: function(){
+        this.invoiceStore = Ext.getStore('ProjectExtJs5.store.InvoiceGrid');
+        var me = this;
+        var grid = me.lookupReference('tapPanelLink');
+        console.log(grid)
+//        Ext.Ajax.request({
+//            method: 'GET',
+//            url: '/api/invoice',
+//            params: {
+//            },
+//            success: function(response){
+//                var text = response.responseText;
+//                var data = JSON.parse(text);
+////                var grid = me.lookupReference('tapPanelLink');
+//                var grid =me.getReference('tapPanelLink');
+//                me.getInvoiceGrid().setStore(me.invoiceStore);
+//                    me.invoiceStore.loadData(data, true)
+//            },
+//            error:function(){
+//                console.log('Faild');
+//            }
+//        })
+
     }
 });
