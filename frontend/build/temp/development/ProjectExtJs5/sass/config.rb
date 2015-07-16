@@ -1,3 +1,3 @@
 require '..\..\..\..\..\ext\packages\ext-theme-base\sass\utils.rb'
 Compass.add_project_configuration('..\..\..\..\..\sass\config.rb')
-cache_path = 'G:\ProjectExtJs5/build/.sass-cache'
+cache_path = 'G:\ProjectExtJs5\frontend/build/.sass-cache'

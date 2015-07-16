@@ -7,7 +7,6 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
 
     xtype: 'app-menu',
     cls:'app-menu',
-    controller: 'main',
     viewModel: {
         type: 'main'
     },
@@ -50,7 +49,8 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
                     text: 'Invoices',
                     width: 200,
                     itemId: 'invoice-btn',
-                    cls: 'button-style open'
+                    cls: 'button-style open',
+                    handler:'loadInvoiceStore'
                 },
 //                {
 //                    xtype: 'button',

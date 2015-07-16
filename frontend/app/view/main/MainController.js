@@ -64,26 +64,6 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         return str.substr(0,1).toUpperCase()+ str.substr(1);
     },
 
-    loadInvoiceStore: function() {
-        var me = this;
-        var grid = this.lookupReference('invoice-grid');
-        var store = grid.getStore();
-
-        Ext.Ajax.request({
-            method: 'GET',
-            url: '/api/invoice',
-            params: {
-            },
-            success: function(response){
-                var text = response.responseText;
-                var data = JSON.parse(text);
- store.loadData(data, false)
-            },
-            error:function(){
-                console.log('Faild');
-            }
-        })
-    },
 
     loadInvoiceStore: function() {
         var me = this;

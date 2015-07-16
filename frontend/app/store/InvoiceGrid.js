@@ -5,6 +5,6 @@
 Ext.define('ProjectExtJs5.store.InvoiceGrid', {
     extend: 'Ext.data.Store',
     model: 'ProjectExtJs5.model.InvoiceGridModel',
-    autoLoad: false  ,
+    autoLoad: true,
     storeId:'invoiceStore'
 });

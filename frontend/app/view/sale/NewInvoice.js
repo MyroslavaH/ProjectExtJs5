@@ -11,7 +11,6 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
         },
         height: 600,
         width: 900,
-        controller: 'main',
         bodyPadding: 10,
 
         items: [

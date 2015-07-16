@@ -13,7 +13,7 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceGrid', {
     columns: [
         {
             xtype: 'rownumberer',
-            width:40,
+            width:40
         },
         { text: 'Name',  dataIndex: 'name', flex: 1 },
         { text: 'Sum', dataIndex: 'sum',flex: 1},
