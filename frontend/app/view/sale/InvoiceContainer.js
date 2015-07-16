@@ -57,8 +57,8 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceContainer', {
             ]
         },
         {
-//            xtype: 'invoice-grid',
-  //          region: 'north'
+            xtype: 'invoice-grid',
+            region: 'north'
         }
 
 

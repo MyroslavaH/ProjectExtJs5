@@ -16,28 +16,22 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     alias: 'controller.main'    ,
     init: function(){
         this.control({
-            '#tapPanelLink':{
+            '#tapPanelEl':{
                 'openContainer': this.openNewTap
             },
             'reserve-container':{
                 'openNewReserve': this.openNewTap
-            },
-//            '#invoice-btn':{
-//                click:this.openNewTap
-//            }
+            }
         })
     },
 
     openNewTap: function(name){
         var container;
-        var tabPanel = Ext.getCmp('tapPanelLink');
+        var tabPanel = this.lookupReference('tapPanelLink')
 
         if (name === 'invoice') {
             container = Ext.create('ProjectExtJs5.view.sale.InvoiceContainer', {
             });
-//        } else if (name === 'return') {
-//            container = Ext.create('ProjectExtJs5.view.sale.ReturnContainer', {
-//            });
         } else if (name === 'reserve') {
             container = Ext.create('ProjectExtJs5.view.sale.ReserveContainer', {
             });
@@ -60,30 +54,6 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
             container = Ext.create('ProjectExtJs5.view.sale.NewInvoice', {
             });
         }
-
-
-//        else if (name === 'new return'){
-//                container = Ext.create('ProjectExtJs5.view.sale.NewReturn', {
-//                });
-//            }
-//            else if (name === 'new invoice'){
-//                container = Ext.create('ProjectExtJs5.view.sale.NewInvoice', {
-//                });
-//        }
-//        else {
-//            container = Ext.create('ProjectExtJs5.view.sale.NewReserve', {
-//            });
-//        }
-//        if(name == 'invoice' ){
-//                container = Ext.create('ProjectExtJs5.view.sale.InvoiceContainer', {
-//
-//                });
-//            }
-//            else if(name == 'return'){
-//                container = Ext.create('ProjectExtJs5.view.sale.ReturnContainer',{
-//
-//                });
-//        }
         name = this.toUpperFirsLetter(name);
         var tab = tabPanel.add({
             title: name,
@@ -105,28 +75,28 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         return str.substr(0,1).toUpperCase()+ str.substr(1);
     },
 
-    loadInvoiceStore: function(){
-        this.invoiceStore = Ext.getStore('ProjectExtJs5.store.InvoiceGrid');
+    loadInvoiceStore: function() {
         var me = this;
-        var grid = me.lookupReference('tapPanelLink');
-        console.log(grid)
-//        Ext.Ajax.request({
-//            method: 'GET',
-//            url: '/api/invoice',
-//            params: {
-//            },
-//            success: function(response){
-//                var text = response.responseText;
-//                var data = JSON.parse(text);
-////                var grid = me.lookupReference('tapPanelLink');
-//                var grid =me.getReference('tapPanelLink');
-//                me.getInvoiceGrid().setStore(me.invoiceStore);
-//                    me.invoiceStore.loadData(data, true)
-//            },
-//            error:function(){
-//                console.log('Faild');
-//            }
-//        })
+        var grid = this.lookupReference('invoice-grid');
+        var store = grid.getStore();
+
+        Ext.Ajax.request({
+            method: 'GET',
+            url: '/api/invoice',
+            params: {
+            },
+            success: function(response){
+                var text = response.responseText;
+                var data = JSON.parse(text);
+//
+
+                   store.loadData(data, false)
+            },
+            error:function(){
+                console.log('Faild');
+            }
+        })
+    },
 
     submitNewInvoice: function(){
         console.log("New invoice submited")
