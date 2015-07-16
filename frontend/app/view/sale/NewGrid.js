@@ -2,11 +2,11 @@
  * Created by Myroslava on 13.06.2015.
  */
 
-Ext.define('ProjectExtJs5.view.sale.ReserveGrid', {
+Ext.define('ProjectExtJs5.view.sale.NewGrid', {
 
     extend: 'Ext.grid.Panel',
     xtype: 'reserve-grid',
-    itemId: 'reserve-grid',
+    itemId: 'new-grid',
     store: Ext.create('ProjectExtJs5.store.NewReturnStore'),
     columns: [
         { text: '№',  dataIndex: 'number', width: 50},

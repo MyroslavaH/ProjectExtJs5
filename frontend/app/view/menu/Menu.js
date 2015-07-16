@@ -7,7 +7,7 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
 
     xtype: 'app-menu',
     cls:'app-menu',
-//    controller: 'main',
+    controller: 'main',
     viewModel: {
         type: 'main'
     },
@@ -47,11 +47,10 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
             items: [
                 {
                     xtype: 'button',
-                    text: 'Invoice',
+                    text: 'Invoices',
                     width: 200,
                     itemId: 'invoice-btn',
-                    cls: 'button-style open',
-                    handler: 'loadInvoiceStore'
+                    cls: 'button-style open'
                 },
 //                {
 //                    xtype: 'button',
@@ -63,52 +62,17 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
 //                },
                 {
                     xtype: 'button',
-                    text: 'Reserve',
+                    text: 'New Invoice',
                     width: 200,
                     cls: 'button-style open',
-                    itemId: 'reserve-btn'
-
-                }
-            ]
-        },
-
-        {
-            xtype: 'panel',
-            title: 'buying',
-            cls:'menu-panel',
-            region: 'west',
-            width: 200,
-            collapsed: true,
-            collapseDirection: 'top',
-            collapsible: true,
-            closeAction: 'hide',
-            floatable: false,
-            titleCollapse: true,
-            layout: {
-                type: 'vbox'
-            },
-            items: [
-                {
-                    xtype: 'button',
-                    text: 'Purchase',
-                    width: 200,
-                    cls: 'button-style open',
-                    itemId: 'purchase-btn'
-
-                },
-                {
-                    xtype: 'button',
-                    text: 'Return',
-                    width: 200,
-                    cls: 'button-style open',
-                    itemId: 'buy-return-btn'
+                    itemId:'new-invoice-btn'
 
                 }
             ]
         },
         {
             xtype: 'panel',
-            title: 'warehouse',
+            title: 'Warehouse',
             region: 'west',
             width: 200,
             collapsed: true,
@@ -129,21 +93,13 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
                     itemId: 'goods-btn',
                     cls: 'button-style open'
 
-                },
-                {
-                    xtype: 'button',
-                    text: 'Change availability',
-                    width: 200,
-                    cls: 'button-style open',
-                    itemId: 'change-btn'
-
                 }
-//
+
             ]
         },
         {
             xtype: 'panel',
-            title: 'payment',
+            title: 'Payment',
             region: 'west',
             width: 200,
             collapsed: true,
@@ -178,7 +134,7 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
 
         {
             xtype: 'panel',
-            title: 'clients',
+            title: 'Clients',
             region: 'west',
             width: 200,
             collapsed: true,

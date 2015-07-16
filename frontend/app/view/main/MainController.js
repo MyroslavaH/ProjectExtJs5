@@ -13,34 +13,52 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         'Ext.window.MessageBox'
     ],
 
-    alias: 'controller.main'    ,
+    alias: 'controller.main',
+
+    refs:[
+        {
+            ref: 'tapPanel',
+            selector: '#tapPanelLink'
+        },
+        {
+            ref: 'main',
+            selector: 'app-main'
+        },
+        {
+            ref: 'invoiceBtn',
+            selector: '#invoice-btn'
+        }
+    ],
     init: function(){
         this.control({
-            '#tapPanelEl':{
+            '#tapPanelLink':{
                 'openContainer': this.openNewTap
             },
-            'reserve-container':{
-                'openNewReserve': this.openNewTap
+            'invoice-container':{
+                'openNewInvoice': this.openNewTap
             }
         })
     },
 
     openNewTap: function(name){
         var container;
-        var tabPanel = this.lookupReference('tapPanelLink')
+        var tabPanel = Ext.getCmp('tapPanelLink');
 
         if (name === 'invoice') {
             container = Ext.create('ProjectExtJs5.view.sale.InvoiceContainer', {
             });
-        } else if (name === 'reserve') {
-            container = Ext.create('ProjectExtJs5.view.sale.ReserveContainer', {
-            });
-        } else if (name === 'purchase') {
-            container = Ext.create('ProjectExtJs5.view.buying.PurchaseContainer', {
-            });
-        } else if (name === 'buy return') {
-            container = Ext.create('ProjectExtJs5.view.buying.PurchaseReturnContainer', {
-            });
+//        } else if (name === 'new invoice') {
+//            container = Ext.create('ProjectExtJs5.view.sale.ReturnContainer', {
+//            });
+//        } else if (name === 'reserve') {
+//            container = Ext.create('ProjectExtJs5.view.sale.ReserveContainer', {
+//            });
+//        } else if (name === 'purchase') {
+//            container = Ext.create('ProjectExtJs5.view.buying.PurchaseContainer', {
+//            });
+//        } else if (name === 'buy return') {
+//            container = Ext.create('ProjectExtJs5.view.buying.PurchaseReturnContainer', {
+//            });
         } else if (name === 'goods') {
             container = Ext.create('ProjectExtJs5.view.warehouse.GoodsContainer', {
             });
@@ -54,6 +72,7 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
             container = Ext.create('ProjectExtJs5.view.sale.NewInvoice', {
             });
         }
+
         name = this.toUpperFirsLetter(name);
         var tab = tabPanel.add({
             title: name,
@@ -73,29 +92,6 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     },
     toUpperFirsLetter: function(str){
         return str.substr(0,1).toUpperCase()+ str.substr(1);
-    },
-
-    loadInvoiceStore: function() {
-        var me = this;
-        var grid = this.lookupReference('invoice-grid');
-        var store = grid.getStore();
-
-        Ext.Ajax.request({
-            method: 'GET',
-            url: '/api/invoice',
-            params: {
-            },
-            success: function(response){
-                var text = response.responseText;
-                var data = JSON.parse(text);
-//
-
-                   store.loadData(data, false)
-            },
-            error:function(){
-                console.log('Faild');
-            }
-        })
     },
 
     submitNewInvoice: function(){
