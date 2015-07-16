@@ -22,25 +22,37 @@ Ext.define('ProjectExtJs5.view.sale.ReserveContainer', {
                 {
                     xtype: 'button',
                     layout: 'vbox',
-//                    region: 'center',
                     height: 40,
                     width: 100,
                     itemId:'new-reserve-btn',
                     text: 'New Reserve'
+                },
+                {
+                    xtype: 'datefield',
+                    anchor: '100%',
+                    fieldLabel: 'Choose range',
+                    name: 'from_date',
+                    maxValue: new Date(),
+                    format: 'd m Y'
+                },
+                {
+                    xtype: 'datefield',
+                    anchor: '100%',
+                    name: 'to_date',
+                    value: new Date(),
+                    format: 'd m Y'
                 }
-
             ]
         },
-
         {
-            xtype: 'reserve-grid',
+            xtype: 'invoice-grid',
             region: 'north'
         }
     ],
     initComponent: function () {
         var me = this;
         me.callParent(arguments);
-        me.down('#new-reserve-btn').on('click', me.setFireEvent, me, 'new reserve')
+        me.down('#new-reserve-btn').on('click', me.setFireEvent, me, 'new invoice')
     },
     setFireEvent: function(scope, el, title){
         this.fireEvent('openNewReserve', title)

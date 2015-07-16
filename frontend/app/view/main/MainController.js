@@ -35,9 +35,9 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         if (name === 'invoice') {
             container = Ext.create('ProjectExtJs5.view.sale.InvoiceContainer', {
             });
-        } else if (name === 'return') {
-            container = Ext.create('ProjectExtJs5.view.sale.ReturnContainer', {
-            });
+//        } else if (name === 'return') {
+//            container = Ext.create('ProjectExtJs5.view.sale.ReturnContainer', {
+//            });
         } else if (name === 'reserve') {
             container = Ext.create('ProjectExtJs5.view.sale.ReserveContainer', {
             });
@@ -56,8 +56,8 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         } else if (name === 'bank'){
             container = Ext.create('ProjectExtJs5.view.payment.BankContainer', {
             });
-        } else if (name === 'new reserve'){
-            container = Ext.create('ProjectExtJs5.view.sale.NewReserve', {
+        } else if (name === 'new invoice'){
+            container = Ext.create('ProjectExtJs5.view.sale.NewInvoice', {
             });
         }
 
@@ -128,5 +128,7 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
 //            }
 //        })
 
+    submitNewInvoice: function(){
+        console.log("New invoice submited")
     }
 });

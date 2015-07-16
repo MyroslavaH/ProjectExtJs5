@@ -1,115 +1,119 @@
 /**
- * Created by Myroslava on 12.06.2015.
+ * Created by Myroslava on 13.06.2015.
  */
+
 Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
-    extend: 'Ext.form.Panel',
-    xtype: 'new-invoice',
-    itemId: 'new-invoice',
-    renderTo: Ext.getBody(),
-    defaults: {
-        anchor: '100%'
-    },
-    height: 500,
-    width: 700,
-    bodyPadding: 10,
-    layout: "vbox",
-    items: [
-        {
-            xtype: 'container',
-            layout: 'hbox',
-            items: [
-                {
-                    xtype: 'textfield',
-                    fieldLabel: 'Name',
-//                afterLabelTextTpl: 'required',
-                    allowBlank: false,
-                    name: 'name',
-                    anchor: '98% 10%'
-                },
-                {
-                    xtype: 'component',
-                    width: 60
-                },
+        extend: 'Ext.panel.Panel',
+        xtype: 'new-invoice',
+        itemId: 'new-invoice',
+        defaults: {
+            anchor: '100%'
+        },
+        height: 600,
+        width: 900,
+        controller: 'main',
+        bodyPadding: 10,
 
-                {
-                    xtype: 'datefield',
-                    fieldLabel: 'Choose date',
-                    maxValue: new Date(),// limited to the current date or prior
-                    format: 'd / m / Y',
-                    name: 'date',
-                    anchor: '100% 10%'
-                }
-                ]
-
-        },
-        {
-            xtype: 'component',
-            height: 20
-        },
-        {
-            xtype: 'container',
-//                flex: 1,
-            layout: 'hbox',
-            items: [
-                {
-                    xtype: 'textfield',
-                    fieldLabel: 'Phone',
-//                      afterLabelTextTpl: 'required',
-                    allowBlank: false,
-                    name: 'phone',
-                    anchor: '100%'
-                },
-                {
-                    xtype: 'component',
-                    width: 60
-                },
-                {
-                    xtype: 'textfield',
-                    fieldLabel: 'Description',
-//                      afterLabelTextTpl: 'required',
-                    allowBlank: false,
-                    name: 'description',
-                    anchor: '100%'
-                }
-            ]
-        },
-        {
-            xtype: 'component',
-            height: 20
-        },
-        {
-            xtype: 'new-grid'
-
-        }
-        ],
-        buttons: [{
-            text: 'Reset',
-            handler: function() {
-                this.up('form').getForm().reset();
-            }
-        },
+        items: [
             {
-                text: 'Submit',
-                formBind: true, //only enabled once the form is valid
-                disabled: true,
-                handler: function() {
-                    var form = this.up('form').getForm();
-                    if (form.isValid()) {
-                        form.submit({
-                            success: function(form, action) {
-                                Ext.Msg.alert('Success', action.result.msg);
-                            },
-                            failure: function(form, action) {
-                                Ext.Msg.alert('Failed', action.result.msg);
-                            }
-                        });
+                xtype: 'container',
+                layout: 'hbox',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        emptyText: 'Name',
+                        width: 200
+                    },
+                    {
+                        xtype: 'component',
+                        width: 50
+                    },
+                    {
+                        xtype:'datefield',
+                        format: 'd / m / Y',
+                        maxValue: new Date(),
+                        emptyText: 'Date',
+                        width: 200
                     }
-                }
-                        }]
-//
-//
-//        })
-//]
-});
+
+                ]
+            },
+            {
+                xtype: 'component',
+                height: 20
+            },
+            {
+                xtype: 'container',
+                layout: 'hbox',
+                flex: 1,
+                items:[
+                    {
+                        xtype: "component",
+                        width: 50
+                    },
+                    {
+                        xtype:'textfield',
+                        emptyText: 'goods',
+                        allowBlank: false,
+                        name: 'goods',
+                        itemId: 'invoice-goods',
+                        flex: 1
+                    },
+                    {
+                        xtype: 'numberfield',
+                        emptyText: 'choose amount',
+                        itemId: 'invoice-amount',
+                        name: 'amount',
+                        flex: 1
+                    },
+                    {
+                        xtype:'numberfield',
+                        emptyText: 'price',
+                        itemId: 'invoice-price',
+                        allowBlank: false,
+                        name: 'price',
+                        flex: 1
+                    },
+                    {
+                        xtype:'button',
+                        text:"+",
+                        itemId: 'add-new-invoice',
+                        flex: 1,
+                        height: 32
+                    }
+                ]},
+
+            {
+                xtype:'reserve-grid',
+                itemId: 'reserve-grid',
+//                data:[] ,
+                store: Ext.create('ProjectExtJs5.store.NewReserveStore')
+            },
+            {xtype: 'button',
+                handler:'submitNewInvoice'
+            }
+        ],
 
 
+        initComponent: function () {
+            var me = this;
+            me.callParent(arguments);
+            this.down('#add-new-invoice').setHandler('onAddNewInvoice', this)
+        },
+
+        onAddNewInvoice: function(){
+            var store = this.down('#reserve-grid').getStore();
+            var goods = this.down('#invoice-goods').getValue();
+            var amount = this.down('#invoice-amount').getValue();
+            var price = this.down('#invoice-price').getValue();
+            var data = {
+                goods:goods,
+                price:price,
+                amount:amount,
+                sum: price*amount
+
+            }
+            store.add(data)
+        }
+    }
+);
