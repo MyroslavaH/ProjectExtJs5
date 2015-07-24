@@ -1840,17 +1840,6 @@
       <change type="DELETED" beforePath="D:\ProjectExtJs5\backend\node_modules\mongoose\node_modules\mpromise\index.js" afterPath="" />
       <change type="DELETED" beforePath="D:\ProjectExtJs5\backend\node_modules\mongoose\node_modules\mquery\test\utils.js" afterPath="" />
       <change type="DELETED" beforePath="D:\ProjectExtJs5\backend\node_modules\mongoose\node_modules\ms\.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\ProjectExtJs5\frontend\NewReturnGrid.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\ProjectExtJs5\frontend\app\model\NewReturnModel.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\ProjectExtJs5\frontend\app\store\CustomerGrid.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\ProjectExtJs5\frontend\app\store\NewReserveStore.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\ProjectExtJs5\frontend\app\store\NewReturnStore.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\ProjectExtJs5\frontend\app\view\payment\BankContainer.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\ProjectExtJs5\frontend\app\view\payment\BankGrid.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\ProjectExtJs5\frontend\app\view\payment\CashContainer.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\ProjectExtJs5\frontend\app\view\payment\CashGrid.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\ProjectExtJs5\frontend\app\view\sale\Grid.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\ProjectExtJs5\frontend\app\view\sale\InvoiceGrid.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/body-parser/node_modules/qs/.gitmodules" afterPath="$PROJECT_DIR$/backend/node_modules/body-parser/node_modules/qs/.gitmodules" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/express/node_modules/qs/.gitmodules" afterPath="$PROJECT_DIR$/backend/node_modules/express/node_modules/qs/.gitmodules" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/passport-local/node_modules/passport-strategy/.jshintrc" afterPath="$PROJECT_DIR$/backend/node_modules/passport-local/node_modules/passport-strategy/.jshintrc" />
@@ -1949,16 +1938,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/passport-local/node_modules/passport-strategy/.travis.yml" afterPath="$PROJECT_DIR$/backend/node_modules/passport-local/node_modules/passport-strategy/.travis.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/passport/node_modules/passport-strategy/.travis.yml" afterPath="$PROJECT_DIR$/backend/node_modules/passport/node_modules/passport-strategy/.travis.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/static-favicon/.travis.yml" afterPath="$PROJECT_DIR$/backend/node_modules/static-favicon/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/clients/AllCustomers.js" afterPath="$PROJECT_DIR$/frontend/app/view/clients/AllCustomers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/sale/AllInvoicesGrid.js" afterPath="$PROJECT_DIR$/frontend/app/view/sale/AllInvoicesGrid.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/Application.js" afterPath="$PROJECT_DIR$/frontend/app/Application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/CHANGELOG.md" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/CHANGELOG.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/source-map/CHANGELOG.md" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/source-map/CHANGELOG.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongodb/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/backend/node_modules/mongodb/CONTRIBUTING.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongoose/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/backend/node_modules/mongoose/CONTRIBUTING.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongoose-auto-increment/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/backend/node_modules/mongoose-auto-increment/CONTRIBUTING.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/warehouse/GoodsContainer.js" afterPath="$PROJECT_DIR$/frontend/app/view/warehouse/GoodsContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/warehouse/GoodsGrid.js" afterPath="$PROJECT_DIR$/frontend/app/view/warehouse/GoodsGrid.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/body-parser/HISTORY.md" afterPath="$PROJECT_DIR$/backend/node_modules/body-parser/HISTORY.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/body-parser/node_modules/raw-body/HISTORY.md" afterPath="$PROJECT_DIR$/backend/node_modules/body-parser/node_modules/raw-body/HISTORY.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/body-parser/node_modules/type-is/HISTORY.md" afterPath="$PROJECT_DIR$/backend/node_modules/body-parser/node_modules/type-is/HISTORY.md" />
@@ -1987,9 +1971,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/morgan/History.md" afterPath="$PROJECT_DIR$/backend/node_modules/morgan/History.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/morgan/node_modules/bytes/History.md" afterPath="$PROJECT_DIR$/backend/node_modules/morgan/node_modules/bytes/History.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/passport/node_modules/pause/History.md" afterPath="$PROJECT_DIR$/backend/node_modules/passport/node_modules/pause/History.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/sale/InvoiceContainer.js" afterPath="$PROJECT_DIR$/frontend/app/view/sale/InvoiceContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/store/InvoiceGrid.js" afterPath="$PROJECT_DIR$/frontend/app/store/InvoiceGrid.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/model/InvoiceGridModel.js" afterPath="$PROJECT_DIR$/frontend/app/model/InvoiceGridModel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/LICENCE" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/LICENCE" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/duplexer/LICENCE" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/duplexer/LICENCE" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/map-stream/LICENCE" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/map-stream/LICENCE" />
@@ -2051,7 +2032,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/passport/node_modules/passport-strategy/LICENSE" afterPath="$PROJECT_DIR$/backend/node_modules/passport/node_modules/passport-strategy/LICENSE" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/static-favicon/LICENSE" afterPath="$PROJECT_DIR$/backend/node_modules/static-favicon/LICENSE" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongodb/node_modules/bson/tools/jasmine-1.1.0/MIT.LICENSE" afterPath="$PROJECT_DIR$/backend/node_modules/mongodb/node_modules/bson/tools/jasmine-1.1.0/MIT.LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/main/Main.js" afterPath="$PROJECT_DIR$/frontend/app/view/main/Main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/main/MainController.js" afterPath="$PROJECT_DIR$/frontend/app/view/main/MainController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/Makefile.dryice.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/Makefile.dryice.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/source-map/Makefile.dryice.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/source-map/Makefile.dryice.js" />
@@ -2082,9 +2062,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/morgan/node_modules/bytes/Makefile" afterPath="$PROJECT_DIR$/backend/node_modules/morgan/node_modules/bytes/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/passport/node_modules/pause/Makefile" afterPath="$PROJECT_DIR$/backend/node_modules/passport/node_modules/pause/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/menu/Menu.js" afterPath="$PROJECT_DIR$/frontend/app/view/menu/Menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/clients/NewCustomer.js" afterPath="$PROJECT_DIR$/frontend/app/view/clients/NewCustomer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/warehouse/NewGoods.js" afterPath="$PROJECT_DIR$/frontend/app/view/warehouse/NewGoods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/sale/NewGrid.js" afterPath="$PROJECT_DIR$/frontend/app/view/sale/NewGrid.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/view/sale/NewInvoice.js" afterPath="$PROJECT_DIR$/frontend/app/view/sale/NewInvoice.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/optimist/README.markdown" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/optimist/README.markdown" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/optimist/node_modules/wordwrap/README.markdown" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/optimist/node_modules/wordwrap/README.markdown" />
@@ -2191,7 +2168,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongodb/lib/mongodb/aggregation_cursor.js" afterPath="$PROJECT_DIR$/backend/node_modules/mongodb/lib/mongodb/aggregation_cursor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/node_modules/amdefine/amdefine.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/node_modules/amdefine/amdefine.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongoose/examples/express/connection-sharing/app.js" afterPath="$PROJECT_DIR$/backend/node_modules/mongoose/examples/express/connection-sharing/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app.js" afterPath="$PROJECT_DIR$/frontend/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/express/lib/application.js" afterPath="$PROJECT_DIR$/backend/node_modules/express/lib/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/optimist/test/_/argv.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/optimist/test/_/argv.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/test/_/argv.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/test/_/argv.js" />
@@ -2236,7 +2212,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/example/boolean_single.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/example/boolean_single.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/bootstrap.css" afterPath="$PROJECT_DIR$/frontend/bootstrap.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/bootstrap.js" afterPath="$PROJECT_DIR$/frontend/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/bootstrap.json" afterPath="$PROJECT_DIR$/frontend/bootstrap.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/optimist/node_modules/wordwrap/test/break.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/optimist/node_modules/wordwrap/test/break.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/node_modules/wordwrap/test/break.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/node_modules/wordwrap/test/break.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongodb/node_modules/bson/browser_build/bson.js" afterPath="$PROJECT_DIR$/backend/node_modules/mongodb/node_modules/bson/browser_build/bson.js" />
@@ -2457,7 +2432,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongodb/lib/mongodb/commands/insert_command.js" afterPath="$PROJECT_DIR$/backend/node_modules/mongodb/lib/mongodb/commands/insert_command.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/node_modules/amdefine/intercept.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/source-map/node_modules/amdefine/intercept.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongoose/lib/internal.js" afterPath="$PROJECT_DIR$/backend/node_modules/mongoose/lib/internal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/invoice.js" afterPath="$PROJECT_DIR$/backend/models/invoice.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/jade-language.md" afterPath="$PROJECT_DIR$/backend/node_modules/jade/jade-language.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/jade.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/jade.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/bin/jade.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/bin/jade.js" />
@@ -2675,7 +2649,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/lib/parse.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/lib/parse.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/test/parse.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/test/parse.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/lib/parser.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/lib/parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/passport.js" afterPath="$PROJECT_DIR$/backend/config/passport.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/passthrough.js" afterPath="$PROJECT_DIR$/backend/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/passthrough.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/pause-stream/test/pause-end.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/pause-stream/test/pause-end.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/test/pause.asynct.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/test/pause.asynct.js" />
@@ -2888,7 +2861,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongodb/node_modules/kerberos/lib/win32/worker.cc" afterPath="$PROJECT_DIR$/backend/node_modules/mongodb/node_modules/kerberos/lib/win32/worker.cc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongodb/node_modules/kerberos/lib/worker.h" afterPath="$PROJECT_DIR$/backend/node_modules/mongodb/node_modules/kerberos/lib/worker.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongodb/node_modules/kerberos/lib/win32/worker.h" afterPath="$PROJECT_DIR$/backend/node_modules/mongodb/node_modules/kerberos/lib/win32/worker.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/workspace.xml" afterPath="$PROJECT_DIR$/backend/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/optimist/node_modules/wordwrap/test/wrap.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/monocle/node_modules/readdirp/examples/node_modules/event-stream/node_modules/optimist/node_modules/wordwrap/test/wrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/node_modules/wordwrap/test/wrap.js" afterPath="$PROJECT_DIR$/backend/node_modules/jade/node_modules/transformers/node_modules/uglify-js/node_modules/optimist/node_modules/wordwrap/test/wrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/writable.js" afterPath="$PROJECT_DIR$/backend/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/writable.js" />
@@ -2919,11 +2892,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="router.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/routes/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50553507" vertical-offset="389" max-vertical-offset="2125">
-              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2125">
+              <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -2932,8 +2905,8 @@
       <file leaf-file-name="NewInvoice.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/NewInvoice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2720">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2720">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -2942,8 +2915,18 @@
       <file leaf-file-name="AllCustomers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/view/clients/AllCustomers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="816">
-              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewInvoiceStore.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/store/NewInvoiceStore.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -2952,8 +2935,8 @@
       <file leaf-file-name="NewCustomer.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/view/clients/NewCustomer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="952">
-              <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="206" max-vertical-offset="952">
+              <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="38" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -2962,30 +2945,8 @@
       <file leaf-file-name="NewGrid.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/NewGrid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="646">
               <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvoiceGridModel.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/model/InvoiceGridModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#46#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/view/main/MainController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2310" max-vertical-offset="3791">
-              <caret line="145" column="31" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -3001,21 +2962,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AllInvoicesGrid.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/AllInvoicesGrid.js">
+      <file leaf-file-name="InvoiceGrid.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/store/InvoiceGrid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+              <caret line="4" column="43" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvoiceContainer.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/InvoiceContainer.js">
+      <file leaf-file-name="AllInvoicesGrid.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/AllInvoicesGrid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="1105">
-              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.5295203" vertical-offset="121" max-vertical-offset="663">
+              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/view/main/MainController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2616" max-vertical-offset="3791">
+              <caret line="151" column="25" selection-start-line="151" selection-start-column="25" selection-end-line="151" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -3068,7 +3039,6 @@
         <option value="$PROJECT_DIR$/frontend/app/view/main/Main.js" />
         <option value="$PROJECT_DIR$/backend/models/goods.js" />
         <option value="$PROJECT_DIR$/frontend/app/view/warehouse/GoodsContainer.js" />
-        <option value="$PROJECT_DIR$/frontend/app/view/menu/Menu.js" />
         <option value="$PROJECT_DIR$/frontend/app/model/GoodsModel.js" />
         <option value="$PROJECT_DIR$/frontend/app/store/GoodsStore.js" />
         <option value="$PROJECT_DIR$/frontend/app/view/clients/NewCustomer.js" />
@@ -3080,11 +3050,12 @@
         <option value="$PROJECT_DIR$/frontend/app/store/NewInvoiceStore.js" />
         <option value="$PROJECT_DIR$/frontend/app/Application.js" />
         <option value="$PROJECT_DIR$/frontend/app/view/clients/AllCustomers.js" />
-        <option value="$PROJECT_DIR$/frontend/app/view/sale/NewInvoice.js" />
         <option value="$PROJECT_DIR$/frontend/app/model/InvoiceGridModel.js" />
-        <option value="$PROJECT_DIR$/backend/routes/router.js" />
         <option value="$PROJECT_DIR$/frontend/app/view/sale/NewGrid.js" />
+        <option value="$PROJECT_DIR$/backend/routes/router.js" />
         <option value="$PROJECT_DIR$/frontend/app/view/main/MainController.js" />
+        <option value="$PROJECT_DIR$/frontend/app/view/sale/NewInvoice.js" />
+        <option value="$PROJECT_DIR$/frontend/app/view/menu/Menu.js" />
       </list>
     </option>
   </component>
@@ -3291,7 +3262,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3397,6 +3368,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectExtJs5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectExtJs5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -3421,14 +3410,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -3439,14 +3420,12 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
       <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -3454,6 +3433,16 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -3483,7 +3472,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31578946" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21115242" sideWeight="0.49882904" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3494,9 +3482,10 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31578946" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3668,13 +3657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/view/menu/Menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1550" max-vertical-offset="2941">
-          <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/node_modules/.bin/jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
@@ -3715,7 +3697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="833">
           <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3723,7 +3704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="629">
           <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3731,7 +3711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3739,7 +3718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
           <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3747,7 +3725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="204">
           <caret line="1" column="15" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3755,7 +3732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
           <caret line="3" column="42" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3763,7 +3739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24156305" vertical-offset="0" max-vertical-offset="563">
           <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3779,7 +3754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09409594" vertical-offset="0" max-vertical-offset="542">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3787,15 +3761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/store/InvoiceGrid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.120781526" vertical-offset="0" max-vertical-offset="563">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3811,6 +3776,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.00369" vertical-offset="102" max-vertical-offset="765">
           <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/InvoiceContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="1105">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/store/NewInvoiceStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -3823,84 +3803,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/store/NewInvoiceStore.js">
+    <entry file="file://$PROJECT_DIR$/backend/routes/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.120781526" vertical-offset="0" max-vertical-offset="563">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/AllInvoicesGrid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/view/clients/AllCustomers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="816">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/view/clients/NewCustomer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="952">
-          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/InvoiceContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="1105">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/model/InvoiceGridModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/NewGrid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/NewInvoice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2720">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="2125">
+          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/view/main/MainController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2310" max-vertical-offset="3791">
-          <caret line="145" column="31" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2616" max-vertical-offset="3791">
+          <caret line="151" column="25" selection-start-line="151" selection-start-column="25" selection-end-line="151" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/routes/router.js">
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/clients/NewCustomer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50553507" vertical-offset="389" max-vertical-offset="2125">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="206" max-vertical-offset="952">
+          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="38" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/store/InvoiceGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/model/InvoiceGridModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28228784" vertical-offset="0" max-vertical-offset="542">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/menu/Menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.25645757" vertical-offset="2179" max-vertical-offset="2788">
+          <caret line="120" column="39" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/clients/AllCustomers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/NewInvoice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2720">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/NewGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="646">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/view/sale/AllInvoicesGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5295203" vertical-offset="121" max-vertical-offset="663">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
           <folding />
         </state>
       </provider>
