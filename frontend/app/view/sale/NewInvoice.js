@@ -4,7 +4,7 @@
 
 Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
     requires: [
-        'ProjectExtJs5.store.NewInvoiceStore'
+        'ProjectExtJs5.store.InvoiceGrid'
     ],
     extend: 'Ext.panel.Panel',
     xtype: 'new-invoice',
