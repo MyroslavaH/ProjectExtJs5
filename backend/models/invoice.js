@@ -12,7 +12,5 @@ var mongoose = require('mongoose'),
             type: Date,
             required:true
         }
-
     });
-
 module.exports = mongoose.model('invoice', InvoiceSchema, 'invoice');
