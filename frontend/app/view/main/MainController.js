@@ -150,7 +150,7 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
             params: {
                 name: name,
                 sum: sum,
-                data: date
+                date: date
             },
             success: function(response){
                 console.log('Success');

@@ -52,14 +52,6 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
                     cls: 'button-style open',
                     handler:'loadInvoiceStore'
                 },
-//                {
-//                    xtype: 'button',
-//                    text: 'Return',
-//                    width: 200,
-//                    cls: 'button-style open',
-//                    itemId: 'return-btn'
-////
-//                },
                 {
                     xtype: 'button',
                     text: 'New Invoice',
@@ -99,7 +91,6 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
                     width: 200,
                     itemId: 'new-good-btn'
                 }
-
             ]
         },
         {
@@ -120,14 +111,14 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
             items: [
                 {
                     xtype: 'button',
-                    text: 'All customers',
+                    text: 'All Clients',
                     width: 200,
                     itemId: 'all-customers',
                     handler: 'loadCustomers'
                 },
                 {
                     xtype: 'button',
-                    text: 'New customer',
+                    text: 'New client',
                     width: 200,
                     itemId: 'new-customer-btn',
                     cls: 'button-style open'
