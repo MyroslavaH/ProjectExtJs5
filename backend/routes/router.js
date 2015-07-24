@@ -31,7 +31,7 @@ module.exports = function (app) {
         obj.sum = body.sum;
         obj.date = body.date;
 
-        var query=Invoice.find(obj , function (err, docs) {
+        var query=Invoice.find(obj, function (err, docs) {
             if (!docs.length){
                 var   obj = {
                         id: 665,
