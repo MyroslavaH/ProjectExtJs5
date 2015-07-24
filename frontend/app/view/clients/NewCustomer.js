@@ -4,74 +4,48 @@
 
 Ext.define('ProjectExtJs5.view.clients.NewCustomer', {
     extend: 'Ext.form.Panel',
+    xtype: 'new-customer',
+    renderTo: Ext.getBody(),
+    itemId: 'new-customer',
+    layout: 'anchor',
+    defaults: {
+        anchor: '100%'
+    },
+    height: 500,
+    width: 700,
+    bodyPadding: 10,
+    reference: 'new-customer',
 
-        xtype: 'new-customer',
-        renderTo: Ext.getBody(),
-        itemid: 'new-customer',
-        layout: 'anchor',
-        defaults: {
-            anchor: '100%'
-        },
-
-//        title: 'Create new customer',
-        height: 300,
-        width: 700,
-        bodyPadding: 10,
-
-        items: [
-            {
-                xtype: 'textfield',
-                fieldLabel: 'First Name',
-                name: 'first'
-            },
-            {
-                xtype: 'textfield',
-                fieldLabel: 'Last Name',
-                name: 'last'
-            },
-            {
-                xtype: 'textfield',
-                fieldLabel: 'Description',
-                name: 'description'
-            },
-            {
-                xtype: 'numberfield',
-                value: 0,
-                minValue: 0,
-                maxValue: 5,
-                anchor: '100%',
-                fieldLabel: 'Kind of discont',
-                name: 'discond'
-
-
-
-
-            }
-        ],
-    buttons: [{
-        text: 'Reset',
-        handler: function() {
-            this.up('form').getForm().reset();
-        }
-       },
+    items: [
         {
-        text: 'Submit',
-        formBind: true, //only enabled once the form is valid
-        disabled: true,
-        handler: function() {
-            var form = this.up('form').getForm();
-            if (form.isValid()) {
-                form.submit({
-                        success: function(form, action) {
-                            Ext.Msg.alert('Success', action.result.msg);
-                        },
-                        failure: function(form, action) {
-                            Ext.Msg.alert('Failed', action.result.msg);
-                        }
-                });
-            }
+            xtype: 'textfield',
+            fieldLabel: 'First Name',
+            name: 'firstName',
+            itemId: 'firstName'
+        },
+        {
+            xtype: 'textfield',
+            fieldLabel: 'Last Name',
+            name: 'lastName',
+            itemId: 'lastName'
+        },
+        {
+            xtype: 'numberfield',
+            fieldLabel: 'Phone Number',
+            name: 'phone',
+            itemId: 'phone'
+        },
+        {
+            xtype: 'button',
+            text:'Add new client',
+            itemId: 'newCustomer-btn',
+            handler: 'addNewClient'
         }
-    }]
+    ],
+    initComponent: function () {
+        var me = this;
+        me.callParent(arguments);
+    }
 
-}
-);
+
+});

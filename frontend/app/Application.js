@@ -10,22 +10,17 @@ Ext.define('ProjectExtJs5.Application', {
 
 
     models:[
-//        'ProjectExtJs5.model.InvoiceGridModel'
-//        'InvoiceGridModel'
+
     ],
 
     stores: [
-        'ProjectExtJs5.store.InvoiceGrid'
-       // 'ProjectExtJs5.store.NewReturnStore'
-//        'InvoiceGridPanel'
+        'ProjectExtJs5.store.InvoiceGrid',
+        'ProjectExtJs5.store.CustomerStore',
+        'ProjectExtJs5.store.GoodsStore',
+        'ProjectExtJs5.store.NewInvoiceStore'
         ],
     views:[
-//        'AllCustomers'
-//        'InvoiceGrid',
-//        'main.Main',
-//        'MainContainer',
-//        'MainModel',
-//        'NewCustomer'
+
     ],
 //    controllers:[
 //        'MainController'

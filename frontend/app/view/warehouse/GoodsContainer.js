@@ -2,12 +2,12 @@
  * Created by Myroslava on 13.06.2015.
  */
 
-Ext.define('ProjectExtJs5.view.warehouse.GoodsContainer', {
-    extend: 'Ext.panel.Panel',
-    xtype:  'goods-container',
-    layout: 'border',
-    height: 500,
-    width: 800,
+    Ext.define('ProjectExtJs5.view.warehouse.GoodsContainer', {
+        extend: 'Ext.panel.Panel',
+        xtype:  'goods-container',
+        layout: 'border',
+        height: 500,
+        width: 800,
 
     items: [
         {
@@ -22,8 +22,8 @@ Ext.define('ProjectExtJs5.view.warehouse.GoodsContainer', {
                     xtype: 'button',
                     layout: 'vbox',
                     height: 40,
-                    width: 100,
-                    text: 'Create New Goods',
+                    width: 150,
+                    text: 'Create New Good',
                     itemId: 'new-goods'
                 }
             ]
@@ -32,5 +32,13 @@ Ext.define('ProjectExtJs5.view.warehouse.GoodsContainer', {
             xtype: 'goods-grid',
             region: 'north'
         }
-    ]
+    ],
+    initComponent: function () {
+        var me = this;
+        me.callParent(arguments);
+        me.down('#new-goods').on('click', me.setFireEvent, me, 'new good')
+    },
+    setFireEvent: function(scope, el, title){
+        this.fireEvent('openNewGoods', title)
+    }
 });

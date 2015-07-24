@@ -39,21 +39,19 @@ Ext.define('ProjectExtJs5.view.main.Main', {
                 id: 'tapPanelLink',
                 xtype: 'tabpanel',
                 reference: 'tapPanelLink'
-
             }
         ],
 
     initComponent: function () {
-            var me = this;
-            me.callParent(arguments);
-            me.down('#invoice-btn').on('click', me.setFireEvent, me, 'invoice'),
-            me.down('#new-invoice-btn').on('click', me.setFireEvent, me, 'new invoice'),
-            me.down('#goods-btn').on('click', me.setFireEvent, me, 'goods'),
-           // me.down('#change-btn').on('click', me.setFireEvent, me, 'change availability'),
-            me.down('#cash-btn').on('click', me.setFireEvent, me, 'cash'),
-            me.down('#bank-btn').on('click', me.setFireEvent, me, 'bank'),
-            me.down('#new-customer-btn').on('click', me.setFireEvent, me, 'new customer'),
+        var me = this;
+        me.callParent(arguments);
+            me.down('#invoice-btn').on('click', me.setFireEvent, me, 'invoice');
+            me.down('#new-invoice-btn').on('click', me.setFireEvent, me, 'new invoice');
+            me.down('#goods-btn').on('click', me.setFireEvent, me, 'goods');
+            me.down('#new-good-btn').on('click', me.setFireEvent, me, 'new good');
+            me.down('#new-customer-btn').on('click', me.setFireEvent, me, 'new customer');
             me.down('#all-customers').on('click', me.setFireEvent, me, 'all customers');
+            me.down('#report-btn').on('click', me.setFireEvent, me, 'report');
     },
 
     setFireEvent: function(scope, el, title){

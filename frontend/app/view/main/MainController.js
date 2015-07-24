@@ -18,6 +18,9 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
             },
             'invoice-container':{
                 'openNewInvoice': this.openNewTap
+            },
+            'goods-container':{
+                'openNewGoods': this.openNewTap
             }
         })
     },
@@ -29,20 +32,25 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         if (name === 'invoice') {
             container = Ext.create('ProjectExtJs5.view.sale.InvoiceContainer', {
             });
-        } else if (name === 'goods') {
-            container = Ext.create('ProjectExtJs5.view.warehouse.GoodsContainer', {
-            });
-        } else if (name === 'cash') {
-            container = Ext.create('ProjectExtJs5.view.payment.CashContainer', {
-            });
-        } else if (name === 'bank'){
-            container = Ext.create('ProjectExtJs5.view.payment.BankContainer', {
-            });
         } else if (name === 'new invoice'){
             container = Ext.create('ProjectExtJs5.view.sale.NewInvoice', {
             });
+        } else if (name === 'goods') {
+            container = Ext.create('ProjectExtJs5.view.warehouse.GoodsContainer', {
+            });
+        } else if (name === 'new good') {
+            container = Ext.create('ProjectExtJs5.view.warehouse.NewGoods', {
+            });
+        } else if (name === 'all customers') {
+            container = Ext.create('ProjectExtJs5.view.clients.AllCustomers', {
+            });
+        } else if (name === 'new customer'){
+            container = Ext.create('ProjectExtJs5.view.clients.NewCustomer', {
+            });
+        }else if (name === 'report'){
+            container = Ext.create('ProjectExtJs5.view.reports.Report', {
+            })
         }
-
         name = this.toUpperFirsLetter(name);
         var tab = tabPanel.add({
             title: name,
@@ -67,7 +75,7 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
 
     loadInvoiceStore: function() {
         var me = this;
-        var grid = this.lookupReference('invoice-grid');
+        var grid = this.lookupReference('all-invoices-grid');
         var store = grid.getStore();
 
         Ext.Ajax.request({
@@ -86,7 +94,125 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         })
     },
 
+    loadGoods: function(){
+        var me = this;
+        var grid = this.lookupReference('goods-grid');
+        var store = grid.getStore();
+
+        Ext.Ajax.request({
+            method: 'GET',
+            url: '/api/goods',
+            params: {
+            },
+            success: function(response){
+                var text = response.responseText;
+                var data = JSON.parse(text);
+                store.loadData(data, false)
+            },
+            error:function(){
+                console.log('Faild');
+            }
+        })
+    },
+
+    loadCustomers: function(){
+        var me = this;
+        var grid = this.lookupReference('all-customers');
+        var store = grid.getStore();
+
+        Ext.Ajax.request({
+            method: 'GET',
+            url: '/api/clients',
+            params: {
+            },
+            success: function(response){
+                var text = response.responseText;
+                var data = JSON.parse(text);
+                store.loadData(data, false)
+            },
+            error:function(){
+                console.log('Faild');
+            }
+        })
+    },
+
     submitNewInvoice: function(){
-        console.log("New invoice submited")
+        var me = this;
+        var view = this.lookupReference('newInvoice');
+        var name = view.down('#name').getValue();
+        var sum = view.down('#sum').getValue();
+        var date = view.down('#date').getValue();
+       // view.getForm().reset();
+        console.log(name, sum);
+        Ext.Ajax.request({
+            method: 'POST',
+            url: '/api/newInvoice',
+            params: {
+                name: name,
+                sum: sum,
+                data: date
+            },
+            success: function(response){
+                console.log('Success');
+            },
+            error:function(){
+                console.log('Faild');
+            }
+        })
+    },
+
+    addNewGood: function(){
+        var me = this;
+        var view = this.lookupReference('newGood');
+        var good = view.down('#good').getValue();
+        var amount = view.down('#amount').getValue();
+        view.getForm().reset();
+        console.log(good, amount);
+        Ext.Ajax.request({
+            method: 'POST',
+            url: '/api/newGood',
+            params: {
+                good: good,
+                amount: amount
+            },
+            success: function(response){
+               console.log('Success');
+            }
+            ,
+            error:function(){
+                console.log('Faild');
+            }
+        })
+    },
+
+    addNewClient: function(){
+        var me = this;
+        var view = this.lookupReference('new-customer');
+
+        var firstName = view.down('#firstName').getValue();
+        var lastName = view.down('#lastName').getValue();
+        var phone= view.down('#phone').getValue();
+      //  var id = id.setIncrement(5000);
+        view.getForm().reset();
+        console.log(firstName, lastName, phone);
+        Ext.Ajax.request({
+            method: 'POST',
+            url: '/api/newClient',
+            params: {
+              //  id: 54543,
+                firstName: firstName,
+                lastName: lastName,
+                phone: phone
+
+            },
+            success: function(response){
+                console.log('Success');
+            }
+            ,
+            error:function(){
+                console.log('Faild');
+            }
+        })
     }
+
 });

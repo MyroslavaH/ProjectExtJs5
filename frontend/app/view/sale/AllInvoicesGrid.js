@@ -3,14 +3,14 @@
  */
 Ext.define('ProjectExtJs5.view.sale.AllInvoicesGrid', {
     requires: [
-        'Ext.grid.RowNumberer'
+        'Ext.grid.RowNumberer',
+        'ProjectExtJs5.store.InvoiceGrid'
     ],
     extend: 'Ext.grid.Panel',
     title: 'All Invoices',
     xtype: 'all-invoices-grid',
     reference: 'all-invoices-grid',
     store: Ext.getStore('ProjectExtJs5.store.InvoiceGrid'),
-
     columns: [
         {
             xtype: 'rownumberer',

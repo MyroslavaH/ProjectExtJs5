@@ -4,9 +4,7 @@
 
 Ext.define('ProjectExtJs5.model.InvoiceGridModel', {
     extend: 'Ext.data.Model',
-
     fields: [
-        { name: 'number', type: 'int'},
         { name: 'name', type: 'string'},
         { name: 'sum', type: 'int'},
          {name: 'date', type:'date'}
