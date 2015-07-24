@@ -4,10 +4,9 @@
  * Sencha Cmd when upgrading.
  */
 
-//Ext.Loader.setConfig({
-//    disableCaching : false,
-//    enabled: true
-//});
+Ext.Loader.setConfig({
+    disableCaching: false
+});
 
 Ext.application({
     name: 'ProjectExtJs5',
