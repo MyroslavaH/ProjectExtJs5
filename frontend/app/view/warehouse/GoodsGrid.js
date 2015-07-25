@@ -20,8 +20,7 @@ Ext.define('ProjectExtJs5.view.warehouse.GoodsGrid', {
         { text: 'Name of Goods',  dataIndex: 'good', flex: 1 },
         { text: 'Amount', dataIndex: 'amount',flex: 1 }
     ],
-    height: 450,
-    width: 800,
+
     renderTo: Ext.getBody(),
 
     initComponent: function () {
