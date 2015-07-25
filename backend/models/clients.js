@@ -3,6 +3,7 @@
 */
 
 var mongoose = require('mongoose'),
+    autoIncrement = require('mongoose-auto-increment'),
     ClientSchema = new mongoose.Schema({
 
         id:{
@@ -22,4 +23,5 @@ var mongoose = require('mongoose'),
             required:true
         }
     });
+ClientSchema.plugin(autoIncrement.plugin, { model: 'clients', field: 'id' });
 module.exports = mongoose.model('clients', ClientSchema, 'clients');

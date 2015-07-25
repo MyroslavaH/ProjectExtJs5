@@ -213,6 +213,16 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
                 console.log('Faild');
             }
         })
+    },
+
+    deleteRow: function(){
+        var view = this.lookupReference('new-grid-invoice');
+        var selected =view.getSelection();
+        if(selected){
+            var store = view.getStore();
+            store.remove(selected)
+        }
+
     }
 
 });

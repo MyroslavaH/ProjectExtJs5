@@ -34,7 +34,6 @@ module.exports = function (app) {
         var query=Invoice.find(obj, function (err, docs) {
             if (!docs.length){
                 var   obj = {
-                        id: 665,
                         name: body.name,
                         sum: body.sum,
                         date: body.date
@@ -64,7 +63,6 @@ module.exports = function (app) {
         var query=Goods.find(obj , function (err, docs) {
             if (!docs.length){
                 var   obj = {
-                        id: 665,
                         good: body.good,
                         amount: body.amount
                     },
@@ -94,7 +92,6 @@ module.exports = function (app) {
         var query=Clients.find(obj , function (err, docs) {
             if (!docs.length){
                 var   obj = {
-                        id: 345,
                         firstName: body.firstName.toUpperCase(),
                         lastName: body.lastName.toUpperCase(),
                         phone: body.phone

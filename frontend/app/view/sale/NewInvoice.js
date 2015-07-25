@@ -106,13 +106,15 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
                     text:"-",
                     itemId: 'del-new-invoice',
                     flex: 1,
-                    height: 32
+                    height: 32,
+                    handler:'deleteRow'
                 }
             ]},
 
         {
             xtype:'new-grid',
             itemId: 'new-grid',
+            reference:'new-grid-invoice',
             store: Ext.create('ProjectExtJs5.store.NewInvoiceStore')
         },
         {

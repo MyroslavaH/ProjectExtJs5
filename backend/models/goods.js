@@ -3,6 +3,7 @@
  */
 
 var mongoose = require('mongoose'),
+    autoIncrement = require('mongoose-auto-increment'),
     GoodsSchema = new mongoose.Schema({
 
         id:{
@@ -18,4 +19,5 @@ var mongoose = require('mongoose'),
             required:true
         }
     });
+GoodsSchema.plugin(autoIncrement.plugin, { model: 'goods', field: 'id' });
 module.exports = mongoose.model('goods', GoodsSchema, 'goods');
