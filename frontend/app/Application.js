@@ -10,7 +10,7 @@ Ext.define('ProjectExtJs5.Application', {
 
 
     models:[
-//        'ProjectExtJs5.model.InvoiceGridModel'
+        'ProjectExtJs5.model.CustomerModel'
 
     ],
 

@@ -4,7 +4,9 @@
 
 Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
     requires: [
-        'ProjectExtJs5.store.InvoiceGrid'
+        'ProjectExtJs5.store.InvoiceGrid',
+        'ProjectExtJs5.store.GoodsStore',
+        'ProjectExtJs5.store.CustomerStore'
     ],
     extend: 'Ext.panel.Panel',
     xtype: 'new-invoice',
@@ -16,17 +18,39 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
     width: 900,
     bodyPadding: 10,
     reference: 'newInvoice',
-
     items: [
         {
             xtype: 'container',
             layout: 'hbox',
             items: [
                 {
-                    xtype: 'textfield',
+                    xtype: 'combobox',
                     emptyText: 'Name',
+                    store: 'ProjectExtJs5.store.CustomerStore',
+                    queryMode: 'local',
+                    displayField: 'firstName',
+                    editable: true,
                     width: 200,
-                    itemId: 'name'
+                    itemId: 'name',
+                    renderTo: Ext.getBody(),
+                    tpl: Ext.create('Ext.XTemplate',
+                        '<tpl for=".">',
+                        '<div class="x-boundlist-item">{firstName} {lastName}</div>',
+                        '</tpl>'
+                    ),
+                    displayTpl: Ext.create('Ext.XTemplate',
+                        '<tpl for=".">',
+                        '{firstName} {lastName}',
+                        '</tpl>'
+                    )
+
+                },
+                {
+                    xtype: 'label',
+                    itemId: 'name-err',
+                    hidden: true,
+                    text: 'Enter name',
+                    margin: '0 0 0 10'
                 },
                 {
                     xtype: 'component',
@@ -43,13 +67,8 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
                 {
                     xtype: 'component',
                     width: 50
-                },
-                {
-                    xtype: 'textfield',
-                    width: 200,
-                    emptyText: 'Sum',
-                    itemId: 'sum'
                 }
+
 
             ]
         },
@@ -67,13 +86,16 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
                     width: 50
                 },
                 {
-                    xtype:'textfield',
+                    xtype:'combobox',
                     emptyText: 'goods',
-                    allowBlank: false,
                     editable: true,
-                    name: 'goods',
                     itemId: 'invoice-goods',
+                    queryMode: 'local',
+                    store: 'ProjectExtJs5.store.GoodsStore',
+                    displayField: 'good',
+                    renderTo: Ext.getBody(),
                     flex: 2
+
                 },
                 {
                     xtype: 'numberfield',
@@ -115,7 +137,16 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
             xtype:'new-grid',
             itemId: 'new-grid',
             reference:'new-grid-invoice',
-            store: Ext.create('ProjectExtJs5.store.NewInvoiceStore')
+            store: Ext.create('ProjectExtJs5.store.NewInvoiceStore'),
+            dockedItems: {
+                xtype: 'textfield',
+                dock: 'bottom',
+                width: 200,
+                emptyText: 'Sum',
+                itemId: 'sum',
+                disabled: true
+            }
+
         },
         {
             xtype: 'button',
@@ -130,9 +161,7 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
         var me = this;
         me.callParent(arguments);
         this.down('#add-new-invoice').setHandler('onAddNewInvoice', this);
-        //  this.down('#sum').setValue(data.sum)
-        //поки що без мінуса
-        //  this.down('#del-new-invoice').setHandler('onDelNewInvoice', this)
+        //this.down('#invoice-goods').on("mouseclick", this.showCategoryData, this);
     },
 
     onAddNewInvoice: function(){
@@ -149,9 +178,9 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
         store.add(data);
         this.down('#sum').setValue(store.sum('sum'));
     }
-
-//        onDelNewRowInvoice: function(){
-//        console.log("ok")
+//    showCategoryData: function(){
+//        this.getStore().load();
 //    }
 
 });
+

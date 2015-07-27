@@ -23,6 +23,22 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
                 'openNewGoods': this.openNewTap
             }
         })
+       this. initStore();
+    },
+
+    initStore: function(){
+        var store = Ext.getStore('ProjectExtJs5.store.CustomerStore');
+        var proxy = store.getProxy();
+        proxy.setUrl('/api/clients');
+        proxy.method ="GET";
+        store.load();
+
+        store = Ext.getStore('ProjectExtJs5.store.GoodsStore');
+        proxy = store.getProxy();
+        proxy.setUrl('/api/goods');
+        proxy.method ="GET";
+        store.load();
+
     },
 
     openNewTap: function(name){
@@ -139,7 +155,7 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     submitNewInvoice: function(){
         var me = this;
         var view = this.lookupReference('newInvoice');
-        var name = view.down('#name').getValue();
+        var name = view.down('#name').getRawValue();;
         var sum = view.down('#sum').getValue();
         var date = view.down('#date').getValue();
        // view.getForm().reset();
@@ -223,6 +239,34 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
             store.remove(selected)
         }
 
+    },
+    chooseRange: function(){
+        var me = this;
+        var view = this.lookupReference('invoiceContainer');
+        var beginDate = view.down('#beginDate').getValue();
+        var endDate = view.down('#endDate').getValue().setHours(23,59,59,999);
+
+        var grid = this.lookupReference('all-invoices-grid');
+        var store = grid.getStore();
+
+        Ext.Ajax.request({
+            method: 'GET',
+            url: '/api/invoice',
+            params: {
+                dateFrom: beginDate,
+                dateTo: endDate
+            },
+            success: function(response){
+                var text = response.responseText;
+                var data = JSON.parse(text);
+                store.loadData(data, false)
+            },
+            error:function(){
+                console.log('Faild');
+            }
+        })
+
     }
+
 
 });

@@ -6,6 +6,7 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceContainer', {
     extend: 'Ext.panel.Panel',
     xtype:  'invoice-container',
     layout: 'border',
+    reference: 'invoiceContainer',
     height: 500,
     width: 800,
 
@@ -28,6 +29,7 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceContainer', {
                 },
                 {
                     xtype: 'datefield',
+                    itemId: 'beginDate',
                     anchor: '100%',
                     fieldLabel: 'Choose range',
                     name: 'from_date',
@@ -36,10 +38,16 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceContainer', {
                 },
                 {
                     xtype: 'datefield',
+                    itemId: 'endDate',
                     anchor: '100%',
                     name: 'to_date',
                     value: new Date(),
                     format: 'd m Y'
+                },
+                {
+                    xtype: 'button',
+                    text: 'Filer',
+                    handler: 'chooseRange'
                 }
             ]
         },

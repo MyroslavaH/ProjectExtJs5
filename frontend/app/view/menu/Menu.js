@@ -127,31 +127,31 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
     ]
     },
 
-    {
-        xtype: 'panel',
-        title: 'Reports',
-        region: 'west',
-        width: 200,
-        collapsed: true,
-        collapseDirection: 'top',
-        collapsible: true,
-        closeAction: 'hide',
-        floatable: false,
-        cls:'menu-panel',
-        titleCollapse: true,
-        layout: {
-            type: 'vbox'
-        },
-            items: [
-                {
-                    xtype: 'button',
-                    text: 'Turnover of goods',
-                    width: 200,
-                    cls: 'button-style open',
-                    itemId: 'report-btn'
-                }
-            ]
-        }
+//    {
+//        xtype: 'panel',
+//        title: 'Reports',
+//        region: 'west',
+//        width: 200,
+//        collapsed: true,
+//        collapseDirection: 'top',
+//        collapsible: true,
+//        closeAction: 'hide',
+//        floatable: false,
+//        cls:'menu-panel',
+//        titleCollapse: true,
+//        layout: {
+//            type: 'vbox'
+//        },
+//            items: [
+//                {
+//                    xtype: 'button',
+//                    text: 'Turnover of goods',
+//                    width: 200,
+//                    cls: 'button-style open',
+//                    itemId: 'report-btn'
+//                }
+//            ]
+//        }
 
     ]
 });

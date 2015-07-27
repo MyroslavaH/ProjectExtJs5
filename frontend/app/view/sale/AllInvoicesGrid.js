@@ -16,11 +16,27 @@ Ext.define('ProjectExtJs5.view.sale.AllInvoicesGrid', {
             xtype: 'rownumberer',
             width:40
         },
-        { text: 'Name',  dataIndex: 'name', flex: 1 },
+        { text: 'Name',  dataIndex: 'name',
+        flex: 1 },
         { text: 'Sum', dataIndex: 'sum',flex: 1},
-        { text: 'Date', dataIndex: 'date',flex: 1  }
+        { text: 'Date', dataIndex: 'date',
+            renderer: function(date ) {
+                var dd = date.getDate();
+                var mm = date.getMonth()+1; //January is 0!
+
+                var yyyy = date.getFullYear();
+                if(dd<10){
+                    dd='0'+dd
+                }
+                if(mm<10){
+                    mm='0'+mm
+                }
+                return  dd+'/'+mm+'/'+yyyy;
+
+            },
+            flex: 1  }
     ],
-    height: 450,
+    height: 550,
     width: 800,
     renderTo: Ext.getBody(),
 
