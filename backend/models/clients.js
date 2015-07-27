@@ -19,7 +19,7 @@ var mongoose = require('mongoose'),
             required:true
         },
         phone:{
-            type: Number,
+            type: String,
             required:true
         }
     });

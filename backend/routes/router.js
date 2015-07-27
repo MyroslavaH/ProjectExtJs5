@@ -4,7 +4,16 @@ var Goods = require('../models/goods');
 
 module.exports = function (app) {
     app.get('/api/invoice', function (req, res) {
-        var query = Invoice.find({});
+        var query;
+        if(req.query.dateFrom && req.query.dateTo){
+            query = Invoice.find(
+                {
+                    'date':{$gte:req.query.dateFrom, $lt:req.query.dateTo}
+                });
+        }else{
+            query = Invoice.find({})
+        }
+
         query.exec(function (err, doc) {
             res.json(doc);
         });
