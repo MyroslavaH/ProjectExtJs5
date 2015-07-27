@@ -14,7 +14,8 @@ Ext.define('ProjectExtJs5.view.sale.AllInvoicesGrid', {
     columns: [
         {
             xtype: 'rownumberer',
-            width:40
+            width:40,
+            text: '№'
         },
         { text: 'Name',  dataIndex: 'name',
         flex: 1 },
@@ -22,8 +23,7 @@ Ext.define('ProjectExtJs5.view.sale.AllInvoicesGrid', {
         { text: 'Date', dataIndex: 'date',
             renderer: function(date ) {
                 var dd = date.getDate();
-                var mm = date.getMonth()+1; //January is 0!
-
+                var mm = date.getMonth()+1;
                 var yyyy = date.getFullYear();
                 if(dd<10){
                     dd='0'+dd

@@ -3,11 +3,6 @@
  */
 Ext.define('ProjectExtJs5.model.CustomerModel', {
     extend: 'Ext.data.Model',
-//    identifier: {
-//        type: 'sequential',
-//        seed: 1000,
-//        increment: 1
-//    },
     fields: [
         { name: 'id', type: 'int'},
         { name: 'firstName', type: 'string'},

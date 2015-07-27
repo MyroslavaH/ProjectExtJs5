@@ -59,7 +59,7 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
                 {
                     xtype:'datefield',
                     format: 'd / m / Y',
-                    maxValue: new Date(),
+                    value: new Date(),
                     emptyText: 'Date',
                     width: 200,
                     itemId: 'date'
@@ -151,12 +151,13 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
         {
             xtype: 'button',
             handler:'submitNewInvoice',
-            text: 'OK'
+            text: 'OK',
+            width: 80,
+            height: 30
+
 
         }
     ],
-
-
     initComponent: function () {
         var me = this;
         me.callParent(arguments);

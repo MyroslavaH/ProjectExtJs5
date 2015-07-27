@@ -155,10 +155,9 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
     submitNewInvoice: function(){
         var me = this;
         var view = this.lookupReference('newInvoice');
-        var name = view.down('#name').getRawValue();;
+        var name = view.down('#name').getRawValue();
         var sum = view.down('#sum').getValue();
         var date = view.down('#date').getValue();
-       // view.getForm().reset();
         console.log(name, sum);
         Ext.Ajax.request({
             method: 'POST',

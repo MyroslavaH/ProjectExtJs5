@@ -13,8 +13,6 @@ Ext.define('ProjectExtJs5.view.clients.AllCustomers', {
     store: Ext.getStore('ProjectExtJs5.store.CustomerStore'),
     columns: [
         {
-//            text: '№', dataIndex: 'id', width: 80
-
             xtype: 'rownumberer',
             text: '№',
             width:80

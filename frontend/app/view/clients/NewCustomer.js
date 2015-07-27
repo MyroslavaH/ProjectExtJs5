@@ -46,6 +46,4 @@ Ext.define('ProjectExtJs5.view.clients.NewCustomer', {
         var me = this;
         me.callParent(arguments);
     }
-
-
 });

@@ -5,12 +5,4 @@ Ext.define('ProjectExtJs5.store.NewInvoiceStore', {
     extend: 'Ext.data.Store',
     model: 'ProjectExtJs5.model.NewInvoiceModel',
     autoLoad: false
-//    proxy: {
-//        type: 'ajax',
-//        url: '../NewInvoiceGrid.json',
-//        reader: {
-//            type: 'json',
-//            rootProperty: 'return-new'
-//        }
-//    }
 });

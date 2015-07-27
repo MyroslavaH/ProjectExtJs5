@@ -21,7 +21,6 @@ Ext.define('ProjectExtJs5.view.sale.NewGrid', {
         { text: 'Price', dataIndex: 'price',flex: 1  },
         { text: 'Sum', dataIndex: 'sum',flex: 1 }
     ],
-//    height: 300,
     flex: 1,
     renderTo: Ext.getBody(),
 

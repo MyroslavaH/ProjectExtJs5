@@ -5,5 +5,4 @@ Ext.define('ProjectExtJs5.store.CustomerStore', {
     extend: 'Ext.data.Store',
     model: 'ProjectExtJs5.model.CustomerModel',
     autoLoad: false
-   // storeId:'invoiceStore'
 });

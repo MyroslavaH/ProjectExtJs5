@@ -13,41 +13,62 @@ Ext.define('ProjectExtJs5.view.sale.InvoiceContainer', {
     items: [
         {
             xtype: 'panel',
-            layout: 'hbox',
+            layout: 'vbox',
             region: 'north',
             width: 700,
-            height: 50,
             bodyPadding: 5,
             items: [
                 {
                     xtype: 'button',
                     layout: 'vbox',
-                    height: 40,
+                    height: 35,
                     width: 100,
                     itemId:'new-invoice-btn',
                     text: 'New Invoice'
                 },
                 {
-                    xtype: 'datefield',
-                    itemId: 'beginDate',
-                    anchor: '100%',
-                    fieldLabel: 'Choose range',
-                    name: 'from_date',
-                    maxValue: new Date(),
-                    format: 'd m Y'
+                    xtype: 'component',
+                    height: 10
                 },
                 {
-                    xtype: 'datefield',
-                    itemId: 'endDate',
-                    anchor: '100%',
-                    name: 'to_date',
-                    value: new Date(),
-                    format: 'd m Y'
-                },
-                {
-                    xtype: 'button',
-                    text: 'Filer',
-                    handler: 'chooseRange'
+                    xtype: 'container',
+                    layout: 'hbox',
+                    items:[
+                        {
+                            xtype: 'datefield',
+                            itemId: 'beginDate',
+                            anchor: '100%',
+                            fieldLabel: 'Choose range',
+                            name: 'from_date',
+                            value: new Date(),
+                            maxValue: new Date(),
+                            format: 'd m Y'
+                        },
+                        {
+                            xtype: 'component',
+                            width: 20
+                        },
+                        {
+                            xtype: 'datefield',
+                            itemId: 'endDate',
+                            anchor: '100%',
+                            name: 'to_date',
+                            value: new Date(),
+                            maxValue: new Date(),
+                            format: 'd m Y'
+                        },
+                        {
+                            xtype: 'component',
+                            width: 20
+                        },
+                        {
+                            xtype: 'button',
+                            text: 'Filer',
+                            height: 35,
+                            width: 100,
+                            handler: 'chooseRange'
+                        }
+                    ]
                 }
             ]
         },

@@ -125,7 +125,7 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
 
                 }
     ]
-    },
+    }
 
 //    {
 //        xtype: 'panel',

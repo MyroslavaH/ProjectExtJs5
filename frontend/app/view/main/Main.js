@@ -51,7 +51,6 @@ Ext.define('ProjectExtJs5.view.main.Main', {
             me.down('#new-good-btn').on('click', me.setFireEvent, me, 'new good');
             me.down('#new-customer-btn').on('click', me.setFireEvent, me, 'new customer');
             me.down('#all-customers').on('click', me.setFireEvent, me, 'all customers');
-
     },
 
     setFireEvent: function(scope, el, title){
