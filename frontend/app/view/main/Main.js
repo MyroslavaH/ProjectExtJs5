@@ -10,9 +10,7 @@ Ext.define('ProjectExtJs5.view.main.Main', {
     requires: [
         'ProjectExtJs5.view.main.MainController',
         'ProjectExtJs5.view.main.MainModel'
-
     ],
-
     xtype: 'app-main',
     controller: 'main',
     viewModel: {
@@ -22,13 +20,16 @@ Ext.define('ProjectExtJs5.view.main.Main', {
         type: 'border'
     },
     items:
-        [{
-            region: 'north',
-            xtype: 'component',
-            padding: 10,
-            height: 40,
-            html: 'My Company'
-        },
+        [
+            {
+                xtype: 'component',
+                layout: 'hbox',
+                region: 'north',
+                padding: 10,
+                height: 40,
+                html: 'My Company'
+
+            },
             {
                 xtype: 'app-menu'
 
@@ -40,20 +41,28 @@ Ext.define('ProjectExtJs5.view.main.Main', {
                 xtype: 'tabpanel',
                 reference: 'tapPanelLink'
             }
+//            {
+//                reference:'login-container',
+//                xtype:'login-container'
+//            }
+
         ],
 
     initComponent: function () {
         var me = this;
         me.callParent(arguments);
-            me.down('#invoice-btn').on('click', me.setFireEvent, me, 'invoice');
-            me.down('#new-invoice-btn').on('click', me.setFireEvent, me, 'new invoice');
-            me.down('#goods-btn').on('click', me.setFireEvent, me, 'goods');
-            me.down('#new-good-btn').on('click', me.setFireEvent, me, 'new good');
-            me.down('#new-customer-btn').on('click', me.setFireEvent, me, 'new customer');
-            me.down('#all-customers').on('click', me.setFireEvent, me, 'all customers');
+        me.down('#invoice-btn').on('click', me.setFireEvent, me, 'invoice');
+        me.down('#new-invoice-btn').on('click', me.setFireEvent, me, 'new invoice');
+        me.down('#goods-btn').on('click', me.setFireEvent, me, 'goods');
+        me.down('#new-good-btn').on('click', me.setFireEvent, me, 'new good');
+        me.down('#new-customer-btn').on('click', me.setFireEvent, me, 'new customer');
+        me.down('#all-customers').on('click', me.setFireEvent, me, 'all customers');
+
     },
 
     setFireEvent: function(scope, el, title){
         this.down('#tapPanelLink').fireEvent('openContainer', title)
     }
+
+
 });

@@ -94,7 +94,7 @@ Ext.define('ProjectExtJs5.view.sale.NewInvoice', {
                     store: 'ProjectExtJs5.store.GoodsStore',
                     displayField: 'good',
                     renderTo: Ext.getBody(),
-                    flex: 2
+                    flex: 3
 
                 },
                 {

@@ -73,7 +73,7 @@ module.exports = function (app) {
             if (!docs.length){
                 var   obj = {
                         good: body.good,
-                        amount: body.amount
+                        amount: +body.amount
                     },
                     doc = new Goods(obj);
                 doc.save(function (err, doc) {

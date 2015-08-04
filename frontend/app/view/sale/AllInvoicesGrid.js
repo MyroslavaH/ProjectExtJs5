@@ -32,7 +32,6 @@ Ext.define('ProjectExtJs5.view.sale.AllInvoicesGrid', {
                     mm='0'+mm
                 }
                 return  dd+'/'+mm+'/'+yyyy;
-
             },
             flex: 1  }
     ],

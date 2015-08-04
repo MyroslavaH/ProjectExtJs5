@@ -10,7 +10,8 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
     viewModel: {
         type: 'main'
     },
-
+    itemId:'menu',
+    margin: '30 0 0 0',
     title: 'Menu',
     region: 'west',
     width: 200,
@@ -30,6 +31,7 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
     items: [
         {
             xtype: 'panel',
+            itemId: 'sale-btn',
             title: 'Sale',
             cls:'menu-panel',
             region: 'west',
@@ -125,6 +127,7 @@ Ext.define('ProjectExtJs5.view.menu.Menu', {
 
                 }
     ]
+
     }
 
 //    {

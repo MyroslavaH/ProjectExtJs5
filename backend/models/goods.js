@@ -8,7 +8,9 @@ var mongoose = require('mongoose'),
 
         id:{
             type: Number,
-            required:true
+            required:true,
+            unique:false
+
         },
         good:{
             type: String,

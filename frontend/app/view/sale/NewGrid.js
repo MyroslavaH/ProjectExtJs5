@@ -16,7 +16,7 @@ Ext.define('ProjectExtJs5.view.sale.NewGrid', {
             text: '№',
             width: 50
         },
-        { text: 'Goods',  dataIndex: 'goods', flex: 1 },
+        { text: 'Goods',  dataIndex: 'goods', flex: 1.5 },
         { text: 'Amount', dataIndex: 'amount',flex: 1},
         { text: 'Price', dataIndex: 'price',flex: 1  },
         { text: 'Sum', dataIndex: 'sum',flex: 1 }

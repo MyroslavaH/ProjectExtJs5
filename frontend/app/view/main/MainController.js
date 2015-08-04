@@ -22,10 +22,9 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
             'goods-container':{
                 'openNewGoods': this.openNewTap
             }
-        })
-       this. initStore();
+        });
+      this. initStore();
     },
-
     initStore: function(){
         var store = Ext.getStore('ProjectExtJs5.store.CustomerStore');
         var proxy = store.getProxy();
@@ -158,6 +157,7 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         var name = view.down('#name').getRawValue();
         var sum = view.down('#sum').getValue();
         var date = view.down('#date').getValue();
+       // view.getForm().reset();
         console.log(name, sum);
         Ext.Ajax.request({
             method: 'POST',
@@ -207,7 +207,6 @@ Ext.define('ProjectExtJs5.view.main.MainController', {
         var firstName = view.down('#firstName').getValue();
         var lastName = view.down('#lastName').getValue();
         var phone= view.down('#phone').getValue();
-      //  var id = id.setIncrement(5000);
         view.getForm().reset();
         console.log(firstName, lastName, phone);
         Ext.Ajax.request({

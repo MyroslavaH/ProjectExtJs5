@@ -10,10 +10,9 @@ Ext.define('ProjectExtJs5.view.warehouse.NewGoods', {
         defaults: {
             anchor: '100%'
         },
-        height: 500,
+       // height: 550,
         width: 700,
         bodyPadding: 10,
-//        layout: 'vbox',
         reference: 'newGood',
         items:[
             {

@@ -12,9 +12,11 @@ Ext.define('ProjectExtJs5.view.warehouse.GoodsGrid', {
     xtype: 'goods-grid',
     itemId: 'goods-grid',
     reference: 'goods-grid',
+    height: 540,
     store: Ext.getStore('ProjectExtJs5.store.GoodsStore'),
     columns: [
-        { xtype: 'rownumberer',
+        {
+            xtype: 'rownumberer',
             text: '№',
             width:80},
         { text: 'Name of Goods',  dataIndex: 'good', flex: 1 },

@@ -10,6 +10,7 @@ Ext.define('ProjectExtJs5.view.clients.AllCustomers', {
     title: 'All Customers',
     xtype: 'all-customers',
     reference: 'all-customers',
+    height: 540,
     store: Ext.getStore('ProjectExtJs5.store.CustomerStore'),
     columns: [
         {
@@ -28,7 +29,7 @@ Ext.define('ProjectExtJs5.view.clients.AllCustomers', {
             flex: 1 },
         { text: 'Phone',  dataIndex: 'phone', flex: 1 }
     ],
-    height: 700,
+
     width: 800,
     renderTo: Ext.getBody(),
 
